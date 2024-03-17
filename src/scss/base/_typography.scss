@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "Roboto";
+    font-weight: 200;
+    font-style: normal;
+    src: local("Roboto") url(../fonts/Roboto.woff2) format(woff2) url(../fonts/Roboto.woff) format(woff);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 800;
+    font-style: normal;
+    src: local("Roboto") url(../fonts/Roboto.woff2) format(woff2) url(../fonts/Roboto.woff) format(woff);
+    font-display: swap;
+}
+
+// Заголовки
+h1 {
+    font-size: 53px;
+    font-weight: 700;
+    line-height: 65px;
+    // margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 53px;
+    font-weight: 700;
+    line-height: 65px;
+    // margin-bottom: 0.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+h5 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+h6 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+// Посилання
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}

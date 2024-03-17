@@ -1,0 +1,24 @@
+// Базові стилі
+@import 'base/reset';
+@import 'base/base';
+@import 'base/variables';
+@import 'base/globals';
+@import 'base/typography';
+// Інші базові стилі
+
+
+// Компоненти
+@import 'components/buttons';
+@import 'components/forms';
+// Інші компоненти
+
+// Макет
+@import 'layout/header';
+@import 'layout/footer';
+// Інші компоненти макету
+
+// Сторінки
+@import 'pages/home';
+@import 'pages/about';
+@import 'base/media-queries';
+// Інші стилі сторінок

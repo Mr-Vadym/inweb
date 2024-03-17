@@ -1,0 +1,114 @@
+$accent: #005640;
+$default: #000;
+$title: #1E1E1E;
+$bg: #fff;
+
+
+
+
+
+
+
+%roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+%roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+%roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+%roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+%montserrat-light {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+%montserrat-medium {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+%montserrat-semibold {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+%montserrat-semibold {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+%montserrat-extralight {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+%montserrat-regular {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+%montserrat-bold {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+// %quicksand-400 {
+//   font-family: "Quicksand-Regular", sans-serif;
+//   font-weight: 400;
+// }
+
+// %quicksand-500 {
+//   font-family: "Quicksand-Medium", sans-serif;
+//   font-weight: 500;
+// }
+
+// %roboto-400 {
+//   font-family: "Roboto-Regular", sans-serif;
+//   font-weight: 400;
+// }
+
+// %roboto-700 {
+//   font-family: "Roboto-Bold", sans-serif;
+//   font-weight: 700;
+// }
+
+// %btn {
+//   padding: 12px 26px;
+//   text-transform: uppercase;
+//   color: #f6f6f6;
+//   background-color: $accent;
+//   box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+//   // @extend %roboto-400
+// }

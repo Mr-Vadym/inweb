@@ -1,0 +1,33 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    // line-height: 140%;
+    color: $default;
+    @extend %roboto-light;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1154px;
+    margin: 0 auto;
+    padding: 0 35px;
+}
+
+
+a {
+    font-size: 16px;
+    // line-height: 1.15;
+    // color: #545454;
+    // background-color: #fff;
+    // @extend %quicksand-500;
+}
