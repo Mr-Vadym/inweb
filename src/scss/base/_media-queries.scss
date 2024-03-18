@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
     .header {
         padding: 21px 35px 24px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
@@ -58,12 +58,45 @@
             flex-direction: column;
         }
 
+        &__link--desktop {
+            display: none;
+        }
 
+        &__link--mobile {
+            display: inline;
+        }
+
+        &__menu--social {
+            margin-top: 5px;
+            min-width: 70px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__item--social {
+            padding: 0;
+        }
+
+        &__link--social {
+            position: static;
+            padding: 0;
+        }
+
+        &__icon {
+            position: static;
+
+        }
+
+        &__link--social span {
+            display: none;
+        }
 
 
         &__menu {
             padding-top: 0;
         }
+
+
 
         &__copy {
             padding: 19px 0;

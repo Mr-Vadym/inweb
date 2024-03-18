@@ -4,10 +4,10 @@ npm-debug.log
 yarn-error.log
 
 # Compiled files
-dist/
+# dist/
 build/
-*.min.js
-*.min.css
+# *.min.js
+# *.min.css
 
 # Dependency directories
 bower_components/

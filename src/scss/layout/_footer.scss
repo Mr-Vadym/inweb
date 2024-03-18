@@ -95,6 +95,14 @@
         display: none;
     }
 
+    &__link--desktop {
+        display: inline;
+    }
+
+    &__link--mobile {
+        display: none;
+    }
+
     &__link--social {
         position: relative;
         padding-left: 11px;

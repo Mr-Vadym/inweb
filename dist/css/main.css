@@ -57,7 +57,8 @@ table {
   border-spacing: 0;
 }
 
-a {
+a,
+a:hover {
   text-decoration: none;
 }
 
@@ -126,20 +127,6 @@ a {
   font-size: 16px;
 }
 
-@font-face {
-  font-family: "Roboto";
-  font-weight: 200;
-  font-style: normal;
-  src: local("Roboto") url(../fonts/Roboto.woff2) format(woff2) url(../fonts/Roboto.woff) format(woff);
-  font-display: swap;
-}
-@font-face {
-  font-family: "Roboto";
-  font-weight: 800;
-  font-style: normal;
-  src: local("Roboto") url(../fonts/Roboto.woff2) format(woff2) url(../fonts/Roboto.woff) format(woff);
-  font-display: swap;
-}
 h1 {
   font-size: 53px;
   font-weight: 700;
@@ -177,13 +164,8 @@ h6 {
 }
 
 a {
-  color: #007bff;
   text-decoration: none;
   transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #0056b3;
 }
 
 .header {
@@ -325,6 +307,12 @@ a:hover {
 .footer__item--social::after {
   display: none;
 }
+.footer__link--desktop {
+  display: inline;
+}
+.footer__link--mobile {
+  display: none;
+}
 .footer__link--social {
   position: relative;
   padding-left: 11px;
@@ -393,6 +381,12 @@ a:hover {
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+  .footer__link--desktop {
+    display: none;
+  }
+  .footer__link--mobile {
+    display: inline;
   }
   .footer__menu--social {
     margin-top: 5px;

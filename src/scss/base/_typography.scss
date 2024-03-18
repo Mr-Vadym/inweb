@@ -1,18 +1,18 @@
-@font-face {
-    font-family: "Roboto";
-    font-weight: 200;
-    font-style: normal;
-    src: local("Roboto") url(../fonts/Roboto.woff2) format(woff2) url(../fonts/Roboto.woff) format(woff);
-    font-display: swap;
-}
+// @font-face {
+//     font-family: "Roboto";
+//     font-weight: 200;
+//     font-style: normal;
+//     src: local("Roboto") url(../fonts/Roboto.woff2) format(woff2) url(../fonts/Roboto.woff) format(woff);
+//     font-display: swap;
+// }
 
-@font-face {
-    font-family: "Roboto";
-    font-weight: 800;
-    font-style: normal;
-    src: local("Roboto") url(../fonts/Roboto.woff2) format(woff2) url(../fonts/Roboto.woff) format(woff);
-    font-display: swap;
-}
+// @font-face {
+//     font-family: "Roboto";
+//     font-weight: 800;
+//     font-style: normal;
+//     src: local("Roboto") url(../fonts/Roboto.woff2) format(woff2) url(../fonts/Roboto.woff) format(woff);
+//     font-display: swap;
+// }
 
 // Заголовки
 h1 {
@@ -55,11 +55,11 @@ h6 {
 
 // Посилання
 a {
-    color: #007bff;
+    // color: #007bff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-a:hover {
-    color: #0056b3;
-}
+// a:hover {
+//     color: #0056b3;
+// }

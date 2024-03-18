@@ -1,8 +1,11 @@
 @import '../../../node_modules/reset-css/sass/reset';
 
-a {
+a,
+a:hover {
     text-decoration: none;
 }
+
+
 
 button {
     background-color: transparent;

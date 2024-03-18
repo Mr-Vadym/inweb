@@ -10,6 +10,8 @@ const fileinclude = require("gulp-file-include");
 const browserSync = require("browser-sync").create();
 const del = require("del");
 const notify = require("gulp-notify");
+const svgmin = require("gulp-svgmin");
+const htmlmin = require("gulp-htmlmin"); // Додано плагін для оптимізації HTML
 
 // Компіляція SCSS в CSS та додавання автопрефіксів
 gulp.task("sass", function () {
@@ -36,6 +38,14 @@ gulp.task("imagemin", function () {
   return gulp.src("src/img/**/*").pipe(imagemin()).pipe(gulp.dest("dist/img"));
 });
 
+// Очистка SVG від сміття
+gulp.task("svgmin", function () {
+  return gulp
+    .src("src/img/**/*.svg")
+    .pipe(svgmin())
+    .pipe(gulp.dest("dist/img"));
+});
+
 // Конвертація шрифтів у формати WOFF і WOFF2
 gulp.task("fonts", function () {
   gulp.src("src/fonts/**/*.ttf").pipe(ttf2woff()).pipe(gulp.dest("dist/fonts"));
@@ -45,7 +55,7 @@ gulp.task("fonts", function () {
     .pipe(gulp.dest("dist/fonts"));
 });
 
-// Обробка HTML з використанням файлу-імпорта
+// Обробка HTML з використанням файлу-імпорта та оптимізація
 gulp.task("html", function () {
   return gulp
     .src(["src/html/*.html"])
@@ -55,6 +65,7 @@ gulp.task("html", function () {
         basepath: "@file",
       })
     )
+    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true })) // Оптимізація HTML
     .pipe(gulp.dest("dist"))
     .pipe(browserSync.stream());
 });
@@ -73,7 +84,7 @@ gulp.task("watch", function () {
   });
   gulp.watch("src/scss/**/*.scss", gulp.series("sass"));
   gulp.watch("src/js/**/*.js", gulp.series("js"));
-  gulp.watch("src/img/**/*", gulp.series("imagemin"));
+  gulp.watch("src/img/**/*", gulp.series("imagemin", "svgmin"));
   gulp.watch("src/fonts/**/*.ttf", gulp.series("fonts"));
   gulp.watch("src/html/**/*.html", gulp.series("html"));
 });
@@ -90,7 +101,7 @@ gulp.task(
   "default",
   gulp.series(
     "clean",
-    gulp.parallel("sass", "js", "imagemin", "fonts", "html"),
+    gulp.parallel("sass", "js", "imagemin", "svgmin", "fonts", "html"),
     "watch"
   )
 );
