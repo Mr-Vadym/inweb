@@ -7,10 +7,12 @@ body {
     font-size: 16px;
     // line-height: 140%;
     color: $default;
-    @extend %roboto-light;
+    @extend %roboto-300;
 
     display: flex;
     flex-direction: column;
+    letter-spacing: 0;
+    text-align: left;
 }
 
 .main {
@@ -23,11 +25,57 @@ body {
     padding: 0 35px;
 }
 
-
 a {
     font-size: 16px;
     // line-height: 1.15;
     // color: #545454;
     // background-color: #fff;
     // @extend %quicksand-500;
+}
+
+.title {
+    display: inline-block;
+}
+
+.separator {
+    margin: 0 25px;
+    width: 0;
+    height: 42px;
+    border: 1px solid #005640;
+    display: inline-block;
+}
+
+.title-descr {
+    display: inline-block;
+    @extend %roboto-300;
+    line-height: 140%;
+    text-align: left;
+    font-size: 20px;
+}
+
+.categories {
+    display: flex;
+    gap: 15px;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: normal;
+
+    &__item {
+        padding: 0 39px;
+        height: 42px;
+
+        border: 1px solid #d2d2d2;
+        border-radius: 31px;
+
+        background: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__link {
+        font-family: Arial, Helvetica, sans-serif; // @extend %roboto-300;
+        color: #545454;
+        line-height: 19px;
+    }
 }

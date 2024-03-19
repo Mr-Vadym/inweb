@@ -1,15 +1,8 @@
 $accent: #005640;
-$default: #000;
-$title: #1E1E1E;
-$bg: #fff;
+$bg-secondary: #f0f0f0;
+$default: #1e1e1e;
 
-
-
-
-
-
-
-%roboto-light {
+%roboto-300 {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -37,6 +30,13 @@ $bg: #fff;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
+    font-style: normal;
+}
+
+%montserrat-400 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
     font-style: normal;
 }
 

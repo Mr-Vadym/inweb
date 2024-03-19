@@ -1,0 +1,50 @@
+.main {}
+
+.container {}
+
+.media {
+    padding: 75px 0 55px;
+
+    &__categories {
+        margin-top: 20px;
+    }
+
+}
+
+.choise {
+    margin-top: 50px;
+
+    &__title {
+        color: rgb(30, 30, 30);
+        @extend %montserrat-400;
+        line-height: 21px;
+    }
+
+    &__articles {
+        margin-top: 17px;
+
+    }
+
+    &__articles> :first-child {
+        max-width: 715px;
+
+
+    }
+
+    &__articles> :first-child>.articles__img {
+        min-height: 261px;
+
+    }
+
+    &__articles> :first-child>.articles__body {
+        min-height: 109px;
+
+    }
+
+
+}
+
+.more-news {
+    padding: 56px 0;
+    background-color: aquamarine;
+}

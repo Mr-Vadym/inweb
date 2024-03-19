@@ -1,11 +1,15 @@
 @import '../../../node_modules/reset-css/sass/reset';
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 a,
 a:hover {
     text-decoration: none;
 }
-
-
 
 button {
     background-color: transparent;
