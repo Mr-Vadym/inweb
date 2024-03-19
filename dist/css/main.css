@@ -73,7 +73,7 @@ button {
   border: none;
 }
 
-.articles__category, .title-descr, body {
+.articles__category, .date, .title-descr, body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -181,6 +181,12 @@ a {
   font-family: Arial, Helvetica, sans-serif;
   color: #545454;
   line-height: 19px;
+}
+
+.date {
+  color: #404040;
+  font-size: 15px;
+  line-height: 18px;
 }
 
 h1,
@@ -459,7 +465,16 @@ a {
 
 .more-news {
   padding: 56px 0;
-  background-color: aquamarine;
+  background: rgb(240, 240, 240);
+}
+.more-news__items {
+  display: flex;
+  justify-content: space-between;
+}
+.more-news__item {
+  max-width: 229px;
+  padding: 2px 24px;
+  border-left: 1.5px solid #1e1e1e;
 }
 
 @media screen and (max-width: 1200px) {

@@ -79,3 +79,10 @@ a {
         line-height: 19px;
     }
 }
+
+.date {
+    color: #404040;
+    @extend %roboto-300;
+    font-size: 15px;
+    line-height: 18px;
+}

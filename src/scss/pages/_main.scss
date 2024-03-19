@@ -46,5 +46,16 @@
 
 .more-news {
     padding: 56px 0;
-    background-color: aquamarine;
+    background: rgb(240, 240, 240);
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        max-width: 229px;
+        padding: 2px 24px;
+        border-left: 1.5px solid #1e1e1e;
+    }
 }
