@@ -473,7 +473,7 @@ a {
 }
 .more-news__item {
   max-width: 229px;
-  padding: 2px 24px;
+  padding: 2px 0 2px 24px;
   border-left: 1.5px solid #1e1e1e;
 }
 
