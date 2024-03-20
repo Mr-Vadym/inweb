@@ -1,0 +1,21 @@
+.more-btn {
+    margin-top: 31px;
+    padding-right: 44px;
+    @extend %montserrat-600;
+    font-size: 17px;
+    line-height: 21px;
+    display: block;
+    text-align: right;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 33px;
+        height: 16px;
+        right: 0;
+        bottom: 1px;
+        background: url(../img/icons/more-btn.svg);
+    }
+
+}

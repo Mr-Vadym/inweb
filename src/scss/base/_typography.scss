@@ -16,34 +16,36 @@
 
 // Заголовки
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #1e1e1e;
-    font-family: Montserrat;
-    font-size: 53px;
-    font-weight: 700;
-    line-height: 65px;
-    letter-spacing: 0%;
-    text-align: left;
+}
 
-
+h1,
+h2 {
+    @extend %montserrat-700;
     font-size: 53px;
-    font-weight: 700;
     line-height: 65px;
-    // margin-bottom: 1rem;
 }
 
 
 
 h3 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 0.6rem;
+    @extend %montserrat-600;
+    font-size: 25px;
+    line-height: 30px;
 }
 
 h4 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.4rem;
+    @extend %montserrat-600;
+    color: #1e1e1e;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: left;
 }
 
 h5 {
