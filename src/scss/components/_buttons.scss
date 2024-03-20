@@ -1,4 +1,67 @@
+.top-btn {
+    @extend %montserrat-semibold;
+    padding: 0 30px;
+    border-radius: 18px;
+    height: 36px;
+    line-height: 36px;
+
+    background: #fff;
+    color: rgb(0, 0, 0);
+   }
+
+.burger,
+.search {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.burger {
+    width: 40px;
+    height: 22px;
+    border: none;
+    background: url(../img/icons/burger.svg);
+
+}
+
+.search {
+    width: 27px;
+    height: 27px;
+    background: url(../img/icons/search.svg);
+}
+
+
+.categories {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: normal;
+
+    &__item {
+        padding: 0 39px;
+        height: 42px;
+
+        border: 1px solid #d2d2d2;
+        border-radius: 31px;
+
+        background: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__link {
+        font-family: Arial, Helvetica, sans-serif; // @extend %roboto-300;
+        color: #545454;
+        line-height: 19px;
+    }
+}
+
 .more-btn {
+    color: #1e1e1e;
+
     margin-top: 31px;
     padding-right: 44px;
     @extend %montserrat-600;

@@ -2,88 +2,19 @@
    v5.0.1 | 20191019
    License: none (public domain)
 */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -93,18 +24,8 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
   display: block;
 }
 
@@ -117,21 +38,16 @@ body {
   line-height: 1;
 }
 
-menu,
-ol,
-ul {
+menu, ol, ul {
   list-style: none;
 }
 
-blockquote,
-q {
+blockquote, q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after,
+q:before, q:after {
   content: "";
   content: none;
 }
@@ -171,7 +87,7 @@ button {
   font-style: normal;
 }
 
-.header__categories-link, .header__go-to, .header__offer-news {
+.header__categories-link, .header__go-to, .header__offer-news, .top-btn {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
@@ -254,29 +170,6 @@ a {
   font-size: 20px;
 }
 
-.categories {
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  align-content: normal;
-}
-.categories__item {
-  padding: 0 39px;
-  height: 42px;
-  border: 1px solid #d2d2d2;
-  border-radius: 31px;
-  background: rgb(255, 255, 255);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.categories__link {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #545454;
-  line-height: 19px;
-}
-
 .date {
   color: #404040;
   font-size: 15px;
@@ -328,7 +221,60 @@ a {
   transition: color 0.3s ease;
 }
 
+.top-btn {
+  padding: 0 30px;
+  border-radius: 18px;
+  height: 36px;
+  line-height: 36px;
+  background: #fff;
+  color: rgb(0, 0, 0);
+}
+
+.burger,
+.search {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.burger {
+  width: 40px;
+  height: 22px;
+  border: none;
+  background: url(../img/icons/burger.svg);
+}
+
+.search {
+  width: 27px;
+  height: 27px;
+  background: url(../img/icons/search.svg);
+}
+
+.categories {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-content: normal;
+}
+.categories__item {
+  padding: 0 39px;
+  height: 42px;
+  border: 1px solid #d2d2d2;
+  border-radius: 31px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.categories__link {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #545454;
+  line-height: 19px;
+}
+
 .more-btn {
+  color: #1e1e1e;
   margin-top: 31px;
   padding-right: 44px;
   font-size: 17px;
@@ -364,15 +310,6 @@ a {
   flex-wrap: wrap;
   gap: 40px;
 }
-.header__burger {
-  width: 40px;
-  height: 22px;
-  border: none;
-  background: url(../img/icons/burger.svg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 .header__go-to, .header__offer-news {
   padding: 0 30px;
   border-radius: 18px;
@@ -383,14 +320,6 @@ a {
 }
 .header .logo {
   margin: 0 auto;
-}
-.header__search {
-  width: 27px;
-  height: 27px;
-  background: url(../img/icons/search.svg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 .header__categories-items {
   display: flex;
@@ -422,6 +351,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 35px 31px;
+  justify-content: center;
 }
 .articles__item {
   max-width: 336px;

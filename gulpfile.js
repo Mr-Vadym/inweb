@@ -11,7 +11,8 @@ const browserSync = require("browser-sync").create();
 const del = require("del");
 const notify = require("gulp-notify");
 const svgmin = require("gulp-svgmin");
-const htmlmin = require("gulp-htmlmin"); // Додано плагін для оптимізації HTML
+const htmlmin = require("gulp-htmlmin");
+const webp = require("gulp-webp");
 
 // Компіляція SCSS в CSS та додавання автопрефіксів
 gulp.task("sass", function () {
@@ -33,17 +34,17 @@ gulp.task("js", function () {
     .pipe(browserSync.stream());
 });
 
-// Оптимізація зображень
-gulp.task("imagemin", function () {
-  return gulp.src("src/img/**/*").pipe(imagemin()).pipe(gulp.dest("dist/img"));
-});
-
-// Очистка SVG від сміття
-gulp.task("svgmin", function () {
+// Оптимізація зображень та конвертація в WebP
+gulp.task("imagemin-webp", function () {
   return gulp
-    .src("src/img/**/*.svg")
-    .pipe(svgmin())
-    .pipe(gulp.dest("dist/img"));
+    .src("src/img/**/*.{jpg,png,svg}")
+    .pipe(imagemin())
+    .pipe(gulp.dest("dist/img"))
+    .pipe(webp())
+    .pipe(gulp.dest("dist/img"))
+    .on("end", function () {
+      del(["dist/img/**/*.{jpg,png}"]); // Видалення лишніх JPG та PNG після завершення
+    });
 });
 
 // Конвертація шрифтів у формати WOFF і WOFF2
@@ -84,7 +85,7 @@ gulp.task("watch", function () {
   });
   gulp.watch("src/scss/**/*.scss", gulp.series("sass"));
   gulp.watch("src/js/**/*.js", gulp.series("js"));
-  gulp.watch("src/img/**/*", gulp.series("imagemin", "svgmin"));
+  gulp.watch("src/img/**/*", gulp.series("imagemin-webp"));
   gulp.watch("src/fonts/**/*.ttf", gulp.series("fonts"));
   gulp.watch("src/html/**/*.html", gulp.series("html"));
 });
@@ -101,7 +102,7 @@ gulp.task(
   "default",
   gulp.series(
     "clean",
-    gulp.parallel("sass", "js", "imagemin", "svgmin", "fonts", "html"),
+    gulp.parallel("sass", "js", "imagemin-webp", "fonts", "html"),
     "watch"
   )
 );

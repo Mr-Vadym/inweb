@@ -53,33 +53,7 @@ a {
     font-size: 20px;
 }
 
-.categories {
-    margin-top: 20px;
-    display: flex;
-    gap: 15px;
-    // justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: normal;
 
-    &__item {
-        padding: 0 39px;
-        height: 42px;
-
-        border: 1px solid #d2d2d2;
-        border-radius: 31px;
-
-        background: rgb(255, 255, 255);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__link {
-        font-family: Arial, Helvetica, sans-serif; // @extend %roboto-300;
-        color: #545454;
-        line-height: 19px;
-    }
-}
 
 .date {
     color: #404040;

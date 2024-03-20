@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 35px 31px;
+    justify-content: center;
 
     &__item {
         max-width: 336px;

@@ -17,22 +17,13 @@
         gap: 40px;
     }
 
-    &__burger {
 
-        // margin-right: 42px;
-        width: 40px;
-        height: 22px;
-        border: none;
-        background: url(../img/icons/burger.svg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
 
 
 
     &__go-to,
     &__offer-news {
+        @extend %montserrat-semibold;
         padding: 0 30px;
         border-radius: 18px;
         height: 36px;
@@ -40,7 +31,6 @@
 
         background: #fff;
         color: rgb(0, 0, 0);
-        @extend %montserrat-semibold;
 
     }
 
@@ -48,15 +38,7 @@
         margin: 0 auto;
     }
 
-    &__search {
-        width: 27px;
-        height: 27px;
-        // margin-left: 37px;
-        background: url(../img/icons/search.svg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+
 
     &__categories-items {
         display: flex;

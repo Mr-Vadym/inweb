@@ -25,6 +25,7 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-typescript": "^6.0.0-alpha.1",
     "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
     "reset-css": "^5.0.2",
     "sass": "^1.72.0"
   }
