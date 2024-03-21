@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v5.0.1 | 20191019
    License: none (public domain)
@@ -221,6 +222,10 @@ a {
   transition: color 0.3s ease;
 }
 
+button {
+  cursor: pointer;
+}
+
 .top-btn {
   padding: 0 30px;
   border-radius: 18px;
@@ -228,6 +233,10 @@ a {
   line-height: 36px;
   background: #fff;
   color: rgb(0, 0, 0);
+}
+.top-btn:hover {
+  background: #005640;
+  color: #fff;
 }
 
 .burger,
@@ -258,6 +267,7 @@ a {
   align-content: normal;
 }
 .categories__item {
+  cursor: pointer;
   padding: 0 39px;
   height: 42px;
   border: 1px solid #d2d2d2;
@@ -267,10 +277,32 @@ a {
   justify-content: center;
   align-items: center;
 }
+.categories__item:hover {
+  background: #005640;
+}
+.categories__item:hover a {
+  color: #fff;
+}
 .categories__link {
   font-family: Arial, Helvetica, sans-serif;
   color: #545454;
   line-height: 19px;
+}
+
+.more-news__item {
+  border-color: transparent;
+  transition: border-color 0.3s ease;
+  /* Плавна зміна границі при наведенні та забиранні курсору */
+}
+.more-news__item:hover {
+  border-color: #005640;
+}
+.more-news__item:hover .more-news__title {
+  color: #005640;
+}
+.more-news__item .more-news__title {
+  transition: color 0.3s ease;
+  /* Плавна зміна кольору тексту при наведенні та забиранні курсору */
 }
 
 .more-btn {
@@ -283,14 +315,59 @@ a {
   text-align: right;
   position: relative;
 }
-.more-btn::after {
-  content: "";
+.more-btn path {
+  transition: 0.3s;
+}
+.more-btn svg {
   position: absolute;
-  width: 33px;
-  height: 16px;
   right: 0;
   bottom: 1px;
-  background: url(../img/icons/more-btn.svg);
+}
+.more-btn:hover {
+  color: #005640;
+}
+.more-btn:hover path {
+  fill: #005640;
+}
+
+.articles__item {
+  transition: 0.3s;
+}
+.articles__item:hover {
+  transition: all 0.3s;
+  background: #005640;
+}
+.articles__item:hover .articles__title {
+  text-decoration: underline;
+  color: #fff;
+}
+.articles__item:hover .articles__title {
+  text-decoration: underline;
+  color: #fff;
+}
+.articles__item:hover .articles__body-date {
+  color: #fff;
+}
+
+.read__item-btn {
+  transition: 0.3s;
+}
+.read__item-btn:hover {
+  transition: 0.3s;
+  background: #005640;
+  color: #fff;
+  border-color: #005640;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+.footer path {
+  transition: 0.3s;
+}
+.footer__item:hover path {
+  transition: 0.3s;
+  stroke: #005640;
 }
 
 .header {
@@ -526,11 +603,12 @@ a {
 .more-news__items {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 .more-news__item {
   max-width: 229px;
   padding: 2px 0 2px 24px;
-  border-left: 1.5px solid #1e1e1e;
+  border-left: 2px solid #1e1e1e;
 }
 .more-news__title {
   margin-top: 10px;
@@ -714,5 +792,12 @@ a {
   .footer__copy-text {
     font-size: 10px;
     line-height: 12px;
+  }
+  .more-news__items {
+    flex-direction: column;
+    align-items: center;
+  }
+  .more-news__item {
+    max-width: 100%;
   }
 }

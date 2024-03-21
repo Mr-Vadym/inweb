@@ -1,4 +1,9 @@
+button {
+    cursor: pointer;
+}
+
 .top-btn {
+
     @extend %montserrat-semibold;
     padding: 0 30px;
     border-radius: 18px;
@@ -7,7 +12,14 @@
 
     background: #fff;
     color: rgb(0, 0, 0);
-   }
+
+    &:hover {
+
+        background: #005640;
+        color: #fff;
+    }
+
+}
 
 .burger,
 .search {
@@ -40,6 +52,7 @@
     align-content: normal;
 
     &__item {
+        cursor: pointer;
         padding: 0 39px;
         height: 42px;
 
@@ -50,12 +63,44 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &:hover {
+
+            background: #005640;
+
+            a {
+                color: #fff;
+            }
+        }
     }
 
     &__link {
         font-family: Arial, Helvetica, sans-serif; // @extend %roboto-300;
         color: #545454;
         line-height: 19px;
+
+
+    }
+}
+
+.more-news {
+    &__item {
+        border-color: transparent;
+        transition: border-color .3s ease;
+        /* Плавна зміна границі при наведенні та забиранні курсору */
+
+        &:hover {
+            border-color: #005640;
+
+            .more-news__title {
+                color: #005640;
+            }
+        }
+
+        .more-news__title {
+            transition: color .3s ease;
+            /* Плавна зміна кольору тексту при наведенні та забиранні курсору */
+        }
     }
 }
 
@@ -71,14 +116,97 @@
     text-align: right;
     position: relative;
 
-    &::after {
-        content: "";
-        position: absolute;
-        width: 33px;
-        height: 16px;
-        right: 0;
-        bottom: 1px;
-        background: url(../img/icons/more-btn.svg);
+    path {
+        transition: 0.3s;
     }
 
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     width: 33px;
+    //     height: 16px;
+    //     right: 0;
+    //     bottom: 1px;
+    //     // background: url(../img/icons/more-btn.svg);
+    // }
+
+    svg {
+        position: absolute;
+        right: 0;
+        bottom: 1px;
+
+
+    }
+
+    &:hover {
+        color: #005640;
+
+        path {
+            fill: #005640;
+        }
+    }
+
+
+}
+
+.articles {
+
+    &__item {
+        transition: .3s;
+    }
+
+    &__item:hover {
+        transition: all .3s;
+        background: #005640;
+
+        .articles__title {
+            text-decoration: underline;
+            color: #fff;
+        }
+
+        .articles__title {
+            text-decoration: underline;
+            color: #fff;
+        }
+
+        .articles__body-date {
+            color: #fff;
+
+        }
+    }
+}
+
+.read {
+    &__item-btn {
+        transition: .3s;
+
+
+    }
+
+    &__item-btn:hover {
+        transition: .3s;
+        background: #005640;
+        color: #fff;
+        border-color: #005640;
+
+    }
+}
+
+.footer {
+    a:hover {
+        color: #fff;
+    }
+
+    path {
+        transition: .3s;
+    }
+
+    &__item:hover {
+
+        path {
+            transition: .3s;
+            stroke: #005640;
+        }
+
+    }
 }

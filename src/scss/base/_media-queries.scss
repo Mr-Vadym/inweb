@@ -107,4 +107,15 @@
             line-height: 12px;
         }
     }
+
+    .more-news {
+        &__items {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__item {
+            max-width: 100%;
+        }
+    }
 }

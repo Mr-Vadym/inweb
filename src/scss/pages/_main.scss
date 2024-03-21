@@ -69,12 +69,13 @@
     &__items {
         display: flex;
         justify-content: space-between;
+        gap: 20px;
     }
 
     &__item {
         max-width: 229px;
         padding: 2px 0 2px 24px;
-        border-left: 1.5px solid #1e1e1e;
+        border-left: 2px solid #1e1e1e;
     }
 
     &__title {
