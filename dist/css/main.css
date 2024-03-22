@@ -314,6 +314,12 @@ button {
     background: #005640;
     color: #fff;
   }
+  .more-news__item:hover {
+    border-color: #005640;
+  }
+  .more-news__item:hover .more-news__title {
+    color: #005640;
+  }
 }
 .top-btn {
   padding: 0 30px;
@@ -368,16 +374,6 @@ button {
   border-color: transparent;
   transition: border-color 0.3s ease;
   /* Плавна зміна границі при наведенні та забиранні курсору */
-}
-.more-news__item:hover {
-  border-color: #005640;
-}
-.more-news__item:hover .more-news__title {
-  color: #005640;
-}
-.more-news__item .more-news__title {
-  transition: color 0.3s ease;
-  /* Плавна зміна кольору тексту при наведенні та забиранні курсору */
 }
 
 .more-btn {

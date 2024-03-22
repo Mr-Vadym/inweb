@@ -4,11 +4,18 @@ button {
 
 @media (hover: hover) {
 
-
     .categories__link {
         &:hover {
             background: #005640;
             color: #fff;
+        }
+    }
+
+    .more-news__item:hover {
+        border-color: #005640;
+
+        .more-news__title {
+            color: #005640;
         }
     }
 }
@@ -25,10 +32,6 @@ button {
     background: #fff;
     color: rgb(0, 0, 0);
 
-    // &:hover {
-    //     background: #005640;
-    //     color: #fff;
-    // }
 }
 
 .burger,
@@ -86,19 +89,6 @@ button {
         border-color: transparent;
         transition: border-color 0.3s ease;
         /* Плавна зміна границі при наведенні та забиранні курсору */
-
-        &:hover {
-            border-color: #005640;
-
-            .more-news__title {
-                color: #005640;
-            }
-        }
-
-        .more-news__title {
-            transition: color 0.3s ease;
-            /* Плавна зміна кольору тексту при наведенні та забиранні курсору */
-        }
     }
 }
 
