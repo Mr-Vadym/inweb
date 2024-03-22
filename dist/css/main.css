@@ -308,10 +308,10 @@ button {
   text-align: right;
   position: relative;
 }
-.more-btn svg:first-child {
+.more-btn a:first-child {
   display: block;
 }
-.more-btn svg:last-child {
+.more-btn a:last-child {
   display: none;
 }
 .more-btn path {
@@ -888,10 +888,10 @@ button {
     font-size: 14px;
     line-height: 17px;
   }
-  .more-btn svg:first-child {
+  .more-btn a:first-child {
     display: none;
   }
-  .more-btn svg:last-child {
+  .more-btn a:last-child {
     display: block;
   }
   .article {

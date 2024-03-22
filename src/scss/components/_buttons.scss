@@ -105,12 +105,12 @@ button {
     text-align: right;
     position: relative;
 
-    & svg:first-child {
+    & a:first-child {
         display: block;
 
     }
 
-    & svg:last-child {
+    & a:last-child {
         display: none;
 
     }

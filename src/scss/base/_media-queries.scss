@@ -210,12 +210,12 @@
         font-size: 14px;
         line-height: 17px;
 
-        & svg:first-child {
+        & a:first-child {
             display: none;
 
         }
 
-        & svg:last-child {
+        & a:last-child {
             display: block;
 
         }
