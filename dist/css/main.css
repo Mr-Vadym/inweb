@@ -354,13 +354,6 @@ button {
   color: #fff;
 }
 
-.burger,
-.search {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .burger {
   width: 40px;
   height: 22px;
@@ -372,6 +365,13 @@ button {
   width: 27px;
   height: 27px;
   background: url(../img/icons/search.svg);
+}
+
+.burger,
+.search {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .categories {
@@ -411,10 +411,10 @@ button {
   text-align: right;
   position: relative;
 }
-.more-btn a:first-child {
+.more-btn svg:first-child {
   display: block;
 }
-.more-btn a:last-child {
+.more-btn svg:last-child {
   display: none;
 }
 .more-btn path {
@@ -596,7 +596,7 @@ button {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 50%;
+  height: 60%;
   border-left: 1px solid #D2D2D2;
 }
 .footer__link {
@@ -812,8 +812,8 @@ button {
 }
 .descr-media__text {
   color: #000000;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -824,14 +824,14 @@ button {
   .header__top {
     margin: 0;
   }
+  .header .burger {
+    width: 30px;
+    height: 17px;
+  }
   .header .logo__img {
     width: 100px;
   }
-  .header__burger {
-    width: 22px;
-    height: 15px;
-  }
-  .header__search {
+  .header .search {
     width: 23px;
     height: 23px;
   }
@@ -932,7 +932,7 @@ button {
   }
   .articles {
     flex-direction: column;
-    gap: 20px 0;
+    gap: 20px 15px;
     font-weight: 600;
   }
   .articles__item {
@@ -955,11 +955,14 @@ button {
     font-size: 14px;
     line-height: 17px;
   }
-  .more-btn a:first-child {
+  .more-btn svg:first-child {
     display: none;
   }
-  .more-btn a:last-child {
+  .more-btn svg:last-child {
     display: block;
+  }
+  .more-btn svg {
+    bottom: 4px;
   }
   .article {
     padding: 20px 0;
@@ -1012,6 +1015,9 @@ button {
   .more-news__item .more-news__title {
     transition: color 0.3s ease;
     /* Плавна зміна кольору тексту при наведенні та забиранні курсору */
+  }
+  .more-news__item:last-child {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -63,12 +63,7 @@ button {
     }
 }
 
-.burger,
-.search {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 
 .burger {
     width: 40px;
@@ -81,6 +76,13 @@ button {
     width: 27px;
     height: 27px;
     background: url(../img/icons/search.svg);
+}
+
+.burger,
+.search {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .categories {
@@ -129,11 +131,11 @@ button {
     text-align: right;
     position: relative;
 
-    & a:first-child {
+    & svg:first-child {
         display: block;
     }
 
-    & a:last-child {
+    & svg:last-child {
         display: none;
     }
 
@@ -141,15 +143,7 @@ button {
         transition: 0.3s;
     }
 
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     width: 33px;
-    //     height: 16px;
-    //     right: 0;
-    //     bottom: 1px;
-    //     // background: url(../img/icons/more-btn.svg);
-    // }
+
 
     svg {
         position: absolute;

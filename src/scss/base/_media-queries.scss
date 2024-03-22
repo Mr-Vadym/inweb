@@ -7,16 +7,18 @@
             margin: 0;
         }
 
+        .burger {
+            width: 30px;
+            height: 17px;
+        }
+
         .logo__img {
             width: 100px;
         }
 
-        &__burger {
-            width: 22px;
-            height: 15px;
-        }
 
-        &__search {
+
+        .search {
             width: 23px;
             height: 23px;
         }
@@ -117,15 +119,7 @@
 
         & .articles__item:nth-child(1) {
             display: none;
-            // max-width: 100%;
 
-            // & .articles__img {
-            //     min-height: 163px;
-            // }
-
-            // & .articles__body {
-            //     min-height: 207px;
-            // }
         }
     }
 
@@ -157,7 +151,7 @@
 
     .articles {
         flex-direction: column;
-        gap: 20px 0;
+        gap: 20px 15px;
 
         &__item {
             max-width: 100%;
@@ -186,12 +180,16 @@
         font-size: 14px;
         line-height: 17px;
 
-        & a:first-child {
+        & svg:first-child {
             display: none;
         }
 
-        & a:last-child {
+        & svg:last-child {
             display: block;
+        }
+
+        svg {
+            bottom: 4px;
         }
     }
 
@@ -239,6 +237,7 @@
     }
 
     .more-news {
+
         &__items {
             flex-direction: column;
         }
@@ -260,6 +259,11 @@
                 transition: color 0.3s ease;
                 /* Плавна зміна кольору тексту при наведенні та забиранні курсору */
             }
+
+        }
+
+        &__item:last-child {
+            display: none;
         }
     }
 }
