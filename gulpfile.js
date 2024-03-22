@@ -14,6 +14,7 @@ const svgmin = require("gulp-svgmin");
 const htmlmin = require("gulp-htmlmin");
 const webp = require("gulp-webp");
 const sourcemaps = require("gulp-sourcemaps");
+const cache = require("gulp-cache"); // Доданий плагін gulp-cache
 
 // Компіляція SCSS в CSS та додавання автопрефіксів з підтримкою sourcemaps
 gulp.task("sass", function () {
@@ -44,7 +45,7 @@ gulp.task("js", function () {
 gulp.task("imagemin-webp", function () {
   return gulp
     .src("src/img/**/*.{jpg,png,svg}")
-    .pipe(imagemin())
+    .pipe(cache(imagemin())) // Використовуємо gulp-cache тут
     .pipe(gulp.dest("dist/img"))
     .pipe(webp())
     .pipe(gulp.dest("dist/img"))
