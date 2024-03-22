@@ -3,19 +3,88 @@
    v5.0.1 | 20191019
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-main, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -25,8 +94,18 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, main, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -39,16 +118,21 @@ body {
   line-height: 1;
 }
 
-menu, ol, ul {
+menu,
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -225,6 +309,12 @@ button {
   cursor: pointer;
 }
 
+@media (hover: hover) {
+  .categories__link:hover {
+    background: #005640;
+    color: #fff;
+  }
+}
 .top-btn {
   padding: 0 30px;
   border-radius: 18px;
@@ -232,10 +322,6 @@ button {
   line-height: 36px;
   background: #fff;
   color: rgb(0, 0, 0);
-}
-.top-btn:hover {
-  background: #005640;
-  color: #fff;
 }
 
 .burger,
@@ -277,10 +363,6 @@ button {
   align-items: center;
   color: #545454;
   line-height: 19px;
-}
-.categories__link:hover {
-  background: #005640;
-  color: #fff;
 }
 .more-news__item {
   border-color: transparent;
@@ -850,9 +932,13 @@ button {
   .articles {
     flex-direction: column;
     gap: 20px 0;
+    font-weight: 600;
   }
   .articles__item {
     max-width: 100%;
+  }
+  .articles__item:hover {
+    background-color: transparent;
   }
   .articles__img {
     min-height: 160px;
@@ -861,163 +947,158 @@ button {
     min-height: 136px;
     padding: 15px 20px;
   }
-  .articles__title {
-    font-weight: 600;
-  }
-  .date {
-    font-size: 12px;
-    line-height: 14px;
-  }
-  .more-news {
-    padding: 15px 0;
-  }
-  .more-news__items {
-    flex-direction: column;
-    align-items: center;
-  }
-  .more-news__item {
-    padding: 10px 0 10px 24px;
-    max-width: 100%;
-  }
-  .more-news__item:last-child {
-    display: none;
-  }
-  .more-btn {
-    margin-top: 20px;
-    padding-right: 36px;
-    font-size: 14px;
-    line-height: 17px;
-  }
-  .more-btn a:first-child {
-    display: none;
-  }
-  .more-btn a:last-child {
-    display: block;
-  }
-  .article {
-    padding: 20px 0;
-  }
-  .article .articles__item:nth-child(n+4) {
-    display: none;
-  }
-  .read-social {
-    max-width: 100%;
-    gap: 8px;
-    align-items: flex-start;
-  }
-  .read-social__text {
-    font-size: 20px;
-    line-height: 24px;
-  }
-  .read-social__icon {
-    width: 25px;
-    height: 25px;
-  }
-  h2 {
-    font-family: Montserrat;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 29px;
-    letter-spacing: 0%;
-    text-align: left;
-  }
-  .cases {
-    padding: 20px 0;
-  }
-  .cases .articles {
-    margin-top: 15px;
-  }
-  h2 {
-    font-size: 24px;
-    line-height: 29px;
-  }
-  .by-direction,
-  .descr-media,
-  .read {
-    display: none;
-  }
-  button {
-    cursor: pointer;
-  }
-  .top-btn {
-    padding: 0 30px;
-    border-radius: 18px;
-    height: 36px;
-    line-height: 36px;
-    background: #fff;
-    color: rgb(0, 0, 0);
-  }
-  .top-btn:hover {
-    background: #005640;
-    color: #fff;
-  }
-  .burger,
-  .search {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .burger {
-    width: 40px;
-    height: 22px;
-    border: none;
-    background: url(../img/icons/burger.svg);
-  }
-  .search {
-    width: 27px;
-    height: 27px;
-    background: url(../img/icons/search.svg);
-  }
-  .more-news__item {
-    transition: border-color 0.3s ease;
-    /* Плавна зміна границі при наведенні та забиранні курсору */
-  }
-  .more-news__item:hover {
-    border-color: #005640;
-  }
-  .more-news__item:hover .more-news__title {
-    color: #005640;
-  }
-  .more-news__item .more-news__title {
-    transition: color 0.3s ease;
-    /* Плавна зміна кольору тексту при наведенні та забиранні курсору */
-  }
-  .articles__item {
-    transition: 0.3s;
-  }
-  .articles__item:hover {
-    transition: all 0.3s;
-    background: #005640;
-  }
-  .articles__item:hover .articles__title {
-    color: #fff;
-  }
-  .articles__item:hover .articles__body-date {
-    color: #fff;
-  }
   .articles__title:hover {
-    text-decoration: underline;
-    color: #fff;
+    color: #000000;
   }
-  .read__item-btn {
-    transition: 0.3s;
-  }
-  .read__item-btn:hover {
-    transition: 0.3s;
-    background: #005640;
-    color: #fff;
-    border-color: #005640;
-  }
-  .footer a:hover {
-    color: #fff;
-  }
-  .footer path {
-    transition: 0.3s;
-  }
-  .footer__item:hover path {
-    transition: 0.3s;
-    stroke: #005640;
-  }
+}
+.date {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.more-news {
+  padding: 15px 0;
+}
+.more-news__items {
+  flex-direction: column;
+  align-items: center;
+}
+.more-news__item {
+  padding: 10px 0 10px 24px;
+  max-width: 100%;
+}
+.more-news__item:last-child {
+  display: none;
+}
+
+.more-btn {
+  margin-top: 20px;
+  padding-right: 36px;
+  font-size: 14px;
+  line-height: 17px;
+}
+.more-btn a:first-child {
+  display: none;
+}
+.more-btn a:last-child {
+  display: block;
+}
+
+.article {
+  padding: 20px 0;
+}
+.article .articles__item:nth-child(n+4) {
+  display: none;
+}
+
+.read-social {
+  max-width: 100%;
+  gap: 8px;
+  align-items: flex-start;
+}
+.read-social__text {
+  font-size: 20px;
+  line-height: 24px;
+}
+.read-social__icon {
+  width: 25px;
+  height: 25px;
+}
+
+h2 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.cases {
+  padding: 20px 0;
+}
+.cases .articles {
+  margin-top: 15px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.by-direction,
+.descr-media,
+.read {
+  display: none;
+}
+
+.top-btn {
+  padding: 0 30px;
+  border-radius: 18px;
+  height: 36px;
+  line-height: 36px;
+  background: #fff;
+  color: rgb(0, 0, 0);
+}
+.top-btn:hover {
+  background: #005640;
+  color: #fff;
+}
+
+.burger,
+.search {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.burger {
+  width: 40px;
+  height: 22px;
+  border: none;
+  background: url(../img/icons/burger.svg);
+}
+
+.search {
+  width: 27px;
+  height: 27px;
+  background: url(../img/icons/search.svg);
+}
+
+.more-news__item {
+  transition: border-color 0.3s ease;
+  /* Плавна зміна границі при наведенні та забиранні курсору */
+}
+.more-news__item:hover {
+  border-color: #005640;
+}
+.more-news__item:hover .more-news__title {
+  color: #005640;
+}
+.more-news__item .more-news__title {
+  transition: color 0.3s ease;
+  /* Плавна зміна кольору тексту при наведенні та забиранні курсору */
+}
+
+.read__item-btn {
+  transition: 0.3s;
+}
+.read__item-btn:hover {
+  transition: 0.3s;
+  background: #005640;
+  color: #fff;
+  border-color: #005640;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+.footer path {
+  transition: 0.3s;
+}
+.footer__item:hover path {
+  transition: 0.3s;
+  stroke: #005640;
 }
 /*# sourceMappingURL=main.css.map */
 

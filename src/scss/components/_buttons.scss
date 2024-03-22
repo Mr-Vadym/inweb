@@ -2,6 +2,19 @@ button {
     cursor: pointer;
 }
 
+@media (hover: hover) {
+
+
+    .categories__link {
+        &:hover {
+            background: #005640;
+            color: #fff;
+        }
+    }
+}
+
+
+
 .top-btn {
     @extend %montserrat-semibold;
     padding: 0 30px;
@@ -12,10 +25,10 @@ button {
     background: #fff;
     color: rgb(0, 0, 0);
 
-    &:hover {
-        background: #005640;
-        color: #fff;
-    }
+    // &:hover {
+    //     background: #005640;
+    //     color: #fff;
+    // }
 }
 
 .burger,
@@ -62,11 +75,7 @@ button {
         color: #545454;
         line-height: 19px;
 
-        &:hover {
-            background: #005640;
 
-            color: #fff;
-        }
     }
 
     &__link {}
