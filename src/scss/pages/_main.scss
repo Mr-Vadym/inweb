@@ -111,6 +111,35 @@
 
 }
 
+.read-social {
+    max-width: 1084px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #005640;
+    padding: 19px;
+    display: flex;
+    justify-content: center;
+    gap: 0 20px;
+    align-items: center;
+
+
+    &__text {
+        color: rgb(255, 255, 255);
+        @extend %montserrat-600;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        gap: 0 10px;
+    }
+}
+
+
+
 .cases {
     padding: 55px 0 70px;
     background: #f0f0f0;
@@ -118,7 +147,9 @@
     & .articles {
         margin-top: 21px;
     }
+
 }
+
 
 .by-direction {
     padding: 55px 0 55px;

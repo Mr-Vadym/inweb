@@ -3,7 +3,6 @@ button {
 }
 
 .top-btn {
-
     @extend %montserrat-semibold;
     padding: 0 30px;
     border-radius: 18px;
@@ -14,18 +13,16 @@ button {
     color: rgb(0, 0, 0);
 
     &:hover {
-
         background: #005640;
         color: #fff;
     }
-
 }
 
 .burger,
 .search {
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
 }
 
 .burger {
@@ -33,7 +30,6 @@ button {
     height: 22px;
     border: none;
     background: url(../img/icons/burger.svg);
-
 }
 
 .search {
@@ -42,17 +38,16 @@ button {
     background: url(../img/icons/search.svg);
 }
 
-
 .categories {
     margin-top: 20px;
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
+    gap: 13px;
     // justify-content: space-between;
     flex-wrap: wrap;
     align-content: normal;
 
-    &__item {
-        cursor: pointer;
+    &__link {
         padding: 0 39px;
         height: 42px;
 
@@ -63,30 +58,24 @@ button {
         display: flex;
         justify-content: center;
         align-items: center;
-
-        &:hover {
-
-            background: #005640;
-
-            a {
-                color: #fff;
-            }
-        }
-    }
-
-    &__link {
-        font-family: Arial, Helvetica, sans-serif; // @extend %roboto-300;
+        @extend %roboto-300;
         color: #545454;
         line-height: 19px;
 
+        &:hover {
+            background: #005640;
 
+            color: #fff;
+        }
     }
+
+    &__link {}
 }
 
 .more-news {
     &__item {
         border-color: transparent;
-        transition: border-color .3s ease;
+        transition: border-color 0.3s ease;
         /* Плавна зміна границі при наведенні та забиранні курсору */
 
         &:hover {
@@ -98,7 +87,7 @@ button {
         }
 
         .more-news__title {
-            transition: color .3s ease;
+            transition: color 0.3s ease;
             /* Плавна зміна кольору тексту при наведенні та забиранні курсору */
         }
     }
@@ -115,6 +104,16 @@ button {
     display: block;
     text-align: right;
     position: relative;
+
+    & svg:first-child {
+        display: block;
+
+    }
+
+    & svg:last-child {
+        display: none;
+
+    }
 
     path {
         transition: 0.3s;
@@ -134,8 +133,6 @@ button {
         position: absolute;
         right: 0;
         bottom: 1px;
-
-
     }
 
     &:hover {
@@ -145,50 +142,42 @@ button {
             fill: #005640;
         }
     }
-
-
 }
 
 .articles {
-
     &__item {
-        transition: .3s;
+        transition: 0.3s;
     }
 
     &__item:hover {
-        transition: all .3s;
+        transition: all 0.3s;
         background: #005640;
 
         .articles__title {
-            text-decoration: underline;
-            color: #fff;
-        }
-
-        .articles__title {
-            text-decoration: underline;
             color: #fff;
         }
 
         .articles__body-date {
             color: #fff;
-
         }
+    }
+
+    &__title:hover {
+        text-decoration: underline;
+        color: #fff;
     }
 }
 
 .read {
     &__item-btn {
-        transition: .3s;
-
-
+        transition: 0.3s;
     }
 
     &__item-btn:hover {
-        transition: .3s;
+        transition: 0.3s;
         background: #005640;
         color: #fff;
         border-color: #005640;
-
     }
 }
 
@@ -198,15 +187,13 @@ button {
     }
 
     path {
-        transition: .3s;
+        transition: 0.3s;
     }
 
     &__item:hover {
-
         path {
-            transition: .3s;
+            transition: 0.3s;
             stroke: #005640;
         }
-
     }
 }

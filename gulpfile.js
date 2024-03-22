@@ -13,23 +13,29 @@ const notify = require("gulp-notify");
 const svgmin = require("gulp-svgmin");
 const htmlmin = require("gulp-htmlmin");
 const webp = require("gulp-webp");
+const sourcemaps = require("gulp-sourcemaps");
 
-// Компіляція SCSS в CSS та додавання автопрефіксів
+// Компіляція SCSS в CSS та додавання автопрефіксів з підтримкою sourcemaps
 gulp.task("sass", function () {
   return gulp
     .src("src/scss/**/*.scss")
+    .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
     .pipe(autoprefixer())
+    .pipe(sourcemaps.write("."))
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("dist/css"))
     .pipe(browserSync.stream());
 });
 
-// Об'єднання та мініфікація JavaScript файлів
+// Об'єднання, мініфікація та створення sourcemaps для JavaScript файлів
 gulp.task("js", function () {
   return gulp
     .src("src/js/**/*.js")
+    .pipe(sourcemaps.init())
     .pipe(concat("main.min.js"))
     .pipe(uglify())
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("dist/js"))
     .pipe(browserSync.stream());
 });
@@ -43,7 +49,7 @@ gulp.task("imagemin-webp", function () {
     .pipe(webp())
     .pipe(gulp.dest("dist/img"))
     .on("end", function () {
-      del(["dist/img/**/*.{jpg,png}"]); // Видалення лишніх JPG та PNG після завершення
+      del(["dist/img/**/*.{jpg,png}"]);
     });
 });
 
@@ -56,7 +62,7 @@ gulp.task("fonts", function () {
     .pipe(gulp.dest("dist/fonts"));
 });
 
-// Обробка HTML з використанням файлу-імпорта та оптимізація
+// Обробка HTML з використанням файлу-імпорта, оптимізація та створення sourcemaps
 gulp.task("html", function () {
   return gulp
     .src(["src/html/*.html"])
@@ -66,7 +72,7 @@ gulp.task("html", function () {
         basepath: "@file",
       })
     )
-    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true })) // Оптимізація HTML
+    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
     .pipe(gulp.dest("dist"))
     .pipe(browserSync.stream());
 });
@@ -94,7 +100,7 @@ gulp.task("taskWithNotification", function () {
   return gulp
     .src("source/*.ext")
     .pipe(/* ваші події тут */)
-    .pipe(notify("Завдання завершено!")); // Сповіщення після завершення завдання
+    .pipe(notify("Завдання завершено!"));
 });
 
 // Запуск усіх задач за замовчуванням
