@@ -3,7 +3,6 @@ button {
 }
 
 @media (hover: hover) {
-
     .categories__link {
         &:hover {
             background: #005640;
@@ -18,9 +17,35 @@ button {
             color: #005640;
         }
     }
+
+    .articles__item:hover {
+        transition: all 0.3s;
+        background: #005640;
+
+        .articles__title {
+            color: #fff;
+        }
+
+        .articles__body-date {
+            color: #fff;
+        }
+    }
+
+    .articles__title:hover {
+        text-decoration: underline;
+        color: #fff;
+    }
+
+    .more-btn {
+        &:hover {
+            color: #005640;
+
+            path {
+                fill: #005640;
+            }
+        }
+    }
 }
-
-
 
 .top-btn {
     @extend %montserrat-semibold;
@@ -32,6 +57,10 @@ button {
     background: #fff;
     color: rgb(0, 0, 0);
 
+    &:hover {
+        background: #005640;
+        color: #fff;
+    }
 }
 
 .burger,
@@ -77,11 +106,7 @@ button {
         @extend %roboto-300;
         color: #545454;
         line-height: 19px;
-
-
     }
-
-    &__link {}
 }
 
 .more-news {
@@ -106,12 +131,10 @@ button {
 
     & a:first-child {
         display: block;
-
     }
 
     & a:last-child {
         display: none;
-
     }
 
     path {
@@ -133,14 +156,6 @@ button {
         right: 0;
         bottom: 1px;
     }
-
-    &:hover {
-        color: #005640;
-
-        path {
-            fill: #005640;
-        }
-    }
 }
 
 .articles {
@@ -148,23 +163,23 @@ button {
         transition: 0.3s;
     }
 
-    &__item:hover {
-        transition: all 0.3s;
-        background: #005640;
+    // &__item:hover {
+    //     transition: all 0.3s;
+    //     background: #005640;
 
-        .articles__title {
-            color: #fff;
-        }
+    //     .articles__title {
+    //         color: #fff;
+    //     }
 
-        .articles__body-date {
-            color: #fff;
-        }
-    }
+    //     .articles__body-date {
+    //         color: #fff;
+    //     }
+    // }
 
-    &__title:hover {
-        text-decoration: underline;
-        color: #fff;
-    }
+    // &__title:hover {
+    //     text-decoration: underline;
+    //     color: #fff;
+    // }
 }
 
 .read {

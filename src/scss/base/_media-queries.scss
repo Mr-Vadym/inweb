@@ -104,8 +104,6 @@
         }
     }
 
-
-
     .media {
         padding: 39px 0 20px;
 
@@ -163,219 +161,105 @@
 
         &__item {
             max-width: 100%;
-
-        }
-
-        &__item:hover {
-            background-color: transparent;
-
         }
 
         &__img {
             min-height: 160px;
         }
 
-
         &__body {
             min-height: 136px;
             padding: 15px 20px;
         }
 
-        &__title:hover {
-            color: #000000;
-        }
-
-
-
         font-weight: 600;
     }
-}
 
-.date {
-    font-size: 12px;
-    line-height: 14px;
-}
-
-
-
-.more-news {
-    padding: 15px 0;
-
-    &__items {
-        flex-direction: column;
-        align-items: center;
+    .date {
+        font-size: 12px;
+        line-height: 14px;
     }
 
-    &__item {
-        padding: 10px 0 10px 24px;
+    .more-btn {
+        margin-top: 20px;
+        padding-right: 36px;
+        font-size: 14px;
+        line-height: 17px;
+
+        & a:first-child {
+            display: none;
+        }
+
+        & a:last-child {
+            display: block;
+        }
+    }
+
+    .article {
+        padding: 20px 0;
+
+        .articles__item:nth-child(n + 4) {
+            display: none;
+        }
+    }
+
+    .read-social {
         max-width: 100%;
+        gap: 8px;
+        align-items: flex-start;
+
+        &__text {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        &__icon {
+            width: 25px;
+            height: 25px;
+        }
     }
 
-    &__item:last-child {
+    .cases {
+        padding: 20px 0;
+
+        & .articles {
+            margin-top: 15px;
+        }
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .by-direction,
+    .descr-media,
+    .read {
         display: none;
     }
-}
 
-.more-btn {
-    margin-top: 20px;
-    padding-right: 36px;
-    font-size: 14px;
-    line-height: 17px;
+    .more-news {
+        &__items {
+            flex-direction: column;
+        }
 
-    & a:first-child {
-        display: none;
+        &__item {
+            transition: all 0.3s ease;
+            max-width: 100%;
+            /* Плавна зміна границі при наведенні та забиранні курсору */
 
-    }
+            &:hover {
+                border-color: #005640;
 
-    & a:last-child {
-        display: block;
-
-    }
-
-}
-
-.article {
-    padding: 20px 0;
-
-    .articles__item:nth-child(n + 4) {
-        display: none;
-    }
-}
-
-.read-social {
-    max-width: 100%;
-    gap: 8px;
-    align-items: flex-start;
-
-    &__text {
-        font-size: 20px;
-        line-height: 24px;
-    }
-
-    &__icon {
-        width: 25px;
-        height: 25px;
-    }
-}
-
-h2 {
-    font-family: Montserrat;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 29px;
-    letter-spacing: 0%;
-    text-align: left;
-}
-
-.cases {
-    padding: 20px 0;
-
-    & .articles {
-        margin-top: 15px;
-    }
-}
-
-h2 {
-    font-size: 24px;
-    line-height: 29px;
-}
-
-.by-direction,
-.descr-media,
-.read {
-    display: none;
-}
-
-
-
-.top-btn {
-    @extend %montserrat-semibold;
-    padding: 0 30px;
-    border-radius: 18px;
-    height: 36px;
-    line-height: 36px;
-
-    background: #fff;
-    color: rgb(0, 0, 0);
-
-    &:hover {
-        background: #005640;
-        color: #fff;
-    }
-}
-
-.burger,
-.search {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.burger {
-    width: 40px;
-    height: 22px;
-    border: none;
-    background: url(../img/icons/burger.svg);
-}
-
-.search {
-    width: 27px;
-    height: 27px;
-    background: url(../img/icons/search.svg);
-}
-
-
-
-.more-news {
-    &__item {
-        transition: border-color 0.3s ease;
-        /* Плавна зміна границі при наведенні та забиранні курсору */
-
-        &:hover {
-            border-color: #005640;
+                .more-news__title {
+                    color: #005640;
+                }
+            }
 
             .more-news__title {
-                color: #005640;
+                transition: color 0.3s ease;
+                /* Плавна зміна кольору тексту при наведенні та забиранні курсору */
             }
-        }
-
-        .more-news__title {
-            transition: color 0.3s ease;
-            /* Плавна зміна кольору тексту при наведенні та забиранні курсору */
-        }
-    }
-}
-
-
-
-
-
-.read {
-    &__item-btn {
-        transition: 0.3s;
-    }
-
-    &__item-btn:hover {
-        transition: 0.3s;
-        background: #005640;
-        color: #fff;
-        border-color: #005640;
-    }
-}
-
-.footer {
-    a:hover {
-        color: #fff;
-    }
-
-    path {
-        transition: 0.3s;
-    }
-
-    &__item:hover {
-        path {
-            transition: 0.3s;
-            stroke: #005640;
         }
     }
 }
