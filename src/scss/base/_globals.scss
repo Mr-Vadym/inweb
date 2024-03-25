@@ -3,6 +3,14 @@ body {
     height: 100%;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
+.padding {
+    padding-right: 17px;
+}
+
 body {
     font-size: 16px;
     // line-height: 140%;
