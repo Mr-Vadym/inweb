@@ -14,38 +14,46 @@ const svgmin = require("gulp-svgmin");
 const htmlmin = require("gulp-htmlmin");
 const webp = require("gulp-webp");
 const sourcemaps = require("gulp-sourcemaps");
-const cache = require("gulp-cache"); // Доданий плагін gulp-cache
+const cache = require("gulp-cache");
 
-// Компіляція SCSS в CSS та додавання автопрефіксів з підтримкою sourcemaps
 gulp.task("sass", function () {
   return gulp
     .src("src/scss/**/*.scss")
     .pipe(sourcemaps.init())
-    .pipe(sass().on("error", sass.logError))
+    .pipe(sass().on("error", function (err) {
+      notify.onError({
+        title: "Sass Error",
+        message: "<%= error.message %>"
+      })(err);
+      this.emit("end");
+    }))
     .pipe(autoprefixer())
-    .pipe(sourcemaps.write("."))
-    .pipe(sourcemaps.write("."))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest("dist/css"))
     .pipe(browserSync.stream());
 });
 
-// Об'єднання, мініфікація та створення sourcemaps для JavaScript файлів
 gulp.task("js", function () {
   return gulp
-    .src("src/js/**/*.js")
+    .src(["node_modules/jquery/dist/jquery.min.js", "src/js/**/*.js"])
     .pipe(sourcemaps.init())
     .pipe(concat("main.min.js"))
-    .pipe(uglify())
-    .pipe(sourcemaps.write("."))
+    .pipe(uglify().on("error", function (err) {
+      notify.onError({
+        title: "JavaScript Error",
+        message: "<%= error.message %>"
+      })(err);
+      this.emit("end");
+    }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest("dist/js"))
     .pipe(browserSync.stream());
 });
 
-// Оптимізація зображень та конвертація в WebP
 gulp.task("imagemin-webp", function () {
   return gulp
     .src("src/img/**/*.{jpg,png,svg}")
-    .pipe(cache(imagemin())) // Використовуємо gulp-cache тут
+    .pipe(cache(imagemin()))
     .pipe(gulp.dest("dist/img"))
     .pipe(webp())
     .pipe(gulp.dest("dist/img"))
@@ -54,7 +62,13 @@ gulp.task("imagemin-webp", function () {
     });
 });
 
-// Конвертація шрифтів у формати WOFF і WOFF2
+gulp.task("svg", function () {
+  return gulp
+    .src("src/img/**/*.svg")
+    .pipe(svgmin())
+    .pipe(gulp.dest("dist/img"));
+});
+
 gulp.task("fonts", function () {
   gulp.src("src/fonts/**/*.ttf").pipe(ttf2woff()).pipe(gulp.dest("dist/fonts"));
   return gulp
@@ -63,53 +77,50 @@ gulp.task("fonts", function () {
     .pipe(gulp.dest("dist/fonts"));
 });
 
-// Обробка HTML з використанням файлу-імпорта, оптимізація та створення sourcemaps
 gulp.task("html", function () {
   return gulp
     .src(["src/html/*.html"])
     .pipe(
       fileinclude({
         prefix: "@@",
-        basepath: "@file",
+        basepath:
+          "@file",
       })
     )
-    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
+    .pipe(cache(htmlmin({ collapseWhitespace: true, removeComments: true })))
     .pipe(gulp.dest("dist"))
     .pipe(browserSync.stream());
 });
 
-// Видалення папки dist перед кожною збіркою
 gulp.task("clean", function () {
   return del(["dist"]);
 });
 
-// Слідкування за змінами у файлах
 gulp.task("watch", function () {
   browserSync.init({
     server: {
       baseDir: "./dist",
     },
   });
-  gulp.watch("src/scss/**/*.scss", gulp.series("sass"));
-  gulp.watch("src/js/**/*.js", gulp.series("js"));
-  gulp.watch("src/img/**/*", gulp.series("imagemin-webp"));
+  gulp
+    .watch("src/scss/**/*.scss", gulp.series("sass"))
+    .on("change", browserSync.reload);
+  gulp
+    .watch("src/js/**/*.js", gulp.series("js"))
+    .on("change", browserSync.stream);
+  gulp.watch("src/img/**/*.{jpg,png}", gulp.series("imagemin-webp"));
+  gulp.watch("src/img/**/*.svg", gulp.series("svg"));
   gulp.watch("src/fonts/**/*.ttf", gulp.series("fonts"));
-  gulp.watch("src/html/**/*.html", gulp.series("html"));
+  gulp
+    .watch("src/html/**/*.html", gulp.series("html"))
+    .on("change", browserSync.reload);
 });
 
-gulp.task("taskWithNotification", function () {
-  return gulp
-    .src("source/*.ext")
-    .pipe(/* ваші події тут */)
-    .pipe(notify("Завдання завершено!"));
-});
-
-// Запуск усіх задач за замовчуванням
 gulp.task(
   "default",
   gulp.series(
     "clean",
-    gulp.parallel("sass", "js", "imagemin-webp", "fonts", "html"),
+    gulp.parallel("sass", "js", "imagemin-webp", "svg", "fonts", "html"),
     "watch"
   )
 );

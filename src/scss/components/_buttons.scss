@@ -3,7 +3,29 @@ button {
 }
 
 @media (hover: hover) {
+    .header {
+
+        &__sub-link:hover {
+            cursor: pointer;
+            color: #005640;
+
+            path {
+                stroke: #005640;
+            }
+        }
+    }
+
+    .top-btn {
+
+        &:hover {
+            background: #005640;
+            color: #fff;
+        }
+    }
+
     .categories__link {
+        transition: .3s;
+
         &:hover {
             background: #005640;
             color: #fff;
@@ -11,15 +33,17 @@ button {
     }
 
     .more-news__item:hover {
+        transition: .3s;
         border-color: #005640;
 
         .more-news__title {
+            transition: .3s;
             color: #005640;
         }
     }
 
     .articles__item:hover {
-        transition: all 0.3s;
+        transition: .3s;
         background: #005640;
 
         .articles__title {
@@ -32,6 +56,7 @@ button {
     }
 
     .articles__title:hover {
+
         text-decoration: underline;
         color: #fff;
     }
@@ -45,10 +70,36 @@ button {
             }
         }
     }
+
+    .read {
+
+
+        &__item-btn:hover {
+            transition: 0.3s;
+            background: #005640;
+            color: #fff;
+            border-color: #005640;
+        }
+    }
+
+    .footer {
+        a:hover {
+            color: #fff;
+        }
+
+
+
+        &__item:hover {
+            path {
+                transition: 0.3s;
+                stroke: #005640;
+            }
+        }
+    }
 }
 
 .top-btn {
-    @extend %montserrat-semibold;
+    @extend %montserrat-600;
     padding: 0 30px;
     border-radius: 18px;
     height: 36px;
@@ -56,34 +107,13 @@ button {
 
     background: #fff;
     color: rgb(0, 0, 0);
+    transition: .3s;
 
-    &:hover {
-        background: #005640;
-        color: #fff;
-    }
+
 }
 
 
 
-.burger {
-    width: 40px;
-    height: 22px;
-    border: none;
-    background: url(../img/icons/burger.svg);
-}
-
-.search {
-    width: 27px;
-    height: 27px;
-    background: url(../img/icons/search.svg);
-}
-
-.burger,
-.search {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 .categories {
     margin-top: 20px;
@@ -95,7 +125,7 @@ button {
     align-content: normal;
 
     &__link {
-        padding: 0 39px;
+        padding: 0 40px;
         height: 42px;
 
         border: 1px solid #d2d2d2;
@@ -114,7 +144,7 @@ button {
 .more-news {
     &__item {
         border-color: transparent;
-        transition: border-color 0.3s ease;
+        transition: 0.3s;
         /* Плавна зміна границі при наведенні та забиранні курсору */
     }
 }
@@ -157,23 +187,6 @@ button {
         transition: 0.3s;
     }
 
-    // &__item:hover {
-    //     transition: all 0.3s;
-    //     background: #005640;
-
-    //     .articles__title {
-    //         color: #fff;
-    //     }
-
-    //     .articles__body-date {
-    //         color: #fff;
-    //     }
-    // }
-
-    // &__title:hover {
-    //     text-decoration: underline;
-    //     color: #fff;
-    // }
 }
 
 .read {
@@ -181,27 +194,15 @@ button {
         transition: 0.3s;
     }
 
-    &__item-btn:hover {
-        transition: 0.3s;
-        background: #005640;
-        color: #fff;
-        border-color: #005640;
-    }
+
 }
 
 .footer {
-    a:hover {
-        color: #fff;
-    }
+
 
     path {
         transition: 0.3s;
     }
 
-    &__item:hover {
-        path {
-            transition: 0.3s;
-            stroke: #005640;
-        }
-    }
+
 }

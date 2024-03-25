@@ -33,7 +33,7 @@
     }
 
     &__title {
-        @extend %montserrat-regular;
+        @extend %montserrat-400;
         color: #fff;
         font-size: 13.7px;
         line-height: 17px;
@@ -80,7 +80,7 @@
     }
 
     &__link {
-        @extend %montserrat-extralight;
+        @extend %montserrat-200;
         font-size: 14px;
         line-height: 17px;
         color: #fff;
