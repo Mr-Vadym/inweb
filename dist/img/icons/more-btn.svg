@@ -1,1 +1,1 @@
-<svg class="more-news__icon" width="33" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32.707 8.357a1 1 0 000-1.414L26.343.579a1 1 0 10-1.414 1.414l5.657 5.657-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM.527 8.65H32v-2H.527v2z" fill="#1E1E1E"/></svg>
+<svg class="more-news__icon" width="33" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32.707 8.357a1 1 0 0 0 0-1.414L26.343.579a1 1 0 1 0-1.414 1.414l5.657 5.657-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364ZM.527 8.65H32v-2H.527v2Z" fill="#1E1E1E"/></svg>

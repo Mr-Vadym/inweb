@@ -2,7 +2,7 @@ jQuery(function () {
     $(".burger-btn, .sidebar__close, .overlay").on("click", function (event) {
         event.preventDefault(); // Запобігаємо перезавантаженню сторінки при натисканні на кнопку
         $(".sidebar").toggleClass("active"); // Перемикаємо клас 'active' для '.search'
-        $("body").toggleClass("no-scroll"); // Перемикаємо клас 'active' для '.search'
+        $(".header").toggleClass("active"); // Перемикаємо клас 'active' для '.search'
         $(".search").removeClass("active"); // Перемикаємо клас 'active' для '.search'
     }); // Додавання обробників подій для кнопок '.search-btn' та '.close'
 
@@ -18,4 +18,5 @@ jQuery(function () {
             }
         });
     });
+
 });
