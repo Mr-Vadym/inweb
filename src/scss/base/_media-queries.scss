@@ -1,11 +1,15 @@
 @media screen and (max-width: 1200px) {
+    .locked {
+        overflow: hidden;
+    }
+
     .header {
         min-height: auto;
-        padding: 21px 35px 24px;
+        padding: 18px 35px 19px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
 
         &__top {
-            margin: 0;
+            padding: 0;
         }
 
         .burger-btn svg {
@@ -32,9 +36,117 @@
         }
 
         .search {
-            bottom: -72px;
+            padding: 16px 35px 20px;
+            bottom: -60px;
+
+            .search-btn {
+                display: none;
+            }
+
+            .close {
+                width: 20px;
+                height: 20px;
+            }
+
+            &__type {
+                font-size: 20px;
+                line-height: 24px;
+                max-width: calc(100% - 30px);
+            }
+
+            &__form {
+                max-width: 1277px;
+                gap: 10px;
+
+            }
         }
     }
+
+
+
+    .burger-btn {
+        width: 30px;
+        height: 17px;
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+    .burger-btn.active {
+
+
+        &::before,
+        &::after {
+            content: "";
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+
+        // &::before {
+        //     top: 0;
+        // }
+
+        // &::after {
+        //     bottom: 0;
+        // }
+
+        span {
+            opacity: 0;
+        }
+
+
+
+    }
+
+    .sidebar {
+        top: 60px;
+        left: -100%;
+
+        &__header {
+            // height: 60px;
+            display: none;
+        }
+
+        &__close {
+            top: 18px;
+            left: 35px;
+        }
+
+        &__inner {
+            width: 100%;
+        }
+
+        &__content {
+            height: calc(100vh - 60px);
+            padding-bottom: 50px;
+        }
+
+        &__bottom {
+            padding-bottom: 0;
+        }
+
+        &__social-list {
+            // margin-bottom: 50px;
+        }
+    }
+
+    .sidebar.active {}
 
     .footer {
         &__info {
@@ -113,7 +225,7 @@
     }
 
     .media {
-        padding: 39px 0 20px;
+        padding: 30px 0 20px;
 
         &__choise {
             margin-top: 16px;

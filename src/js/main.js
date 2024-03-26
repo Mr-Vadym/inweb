@@ -3,6 +3,8 @@ jQuery(function () {
         event.preventDefault(); // Запобігаємо перезавантаженню сторінки при натисканні на кнопку
         $(".sidebar").toggleClass("active"); // Перемикаємо клас 'active' для '.search'
         $(".header").toggleClass("active"); // Перемикаємо клас 'active' для '.search'
+        $(".burger-btn").toggleClass("active"); // Перемикаємо клас 'active' для '.search'
+        $("body").toggleClass("locked"); // Перемикаємо клас 'active' для '.search'
         $(".search").removeClass("active"); // Перемикаємо клас 'active' для '.search'
     }); // Додавання обробників подій для кнопок '.search-btn' та '.close'
 
