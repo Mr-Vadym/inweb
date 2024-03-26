@@ -3,6 +3,18 @@ button {
 }
 
 @media (hover: hover) {
+
+    .sidebar {
+
+        &__top-link:hover,
+        &__sub-link:hover {
+            color: #005640;
+        }
+    }
+
+
+
+
     .header {
 
         &__sub-link:hover {
@@ -20,6 +32,7 @@ button {
         &:hover {
             background: #005640;
             color: #fff;
+            border: 1px solid transparent;
         }
     }
 
@@ -108,9 +121,11 @@ button {
     background: #fff;
     color: rgb(0, 0, 0);
     transition: .3s;
+    border: 1px solid #1E1E1E;
 
 
 }
+
 
 
 
@@ -119,7 +134,7 @@ button {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    gap: 13px;
+    gap: 12px;
     // justify-content: space-between;
     flex-wrap: wrap;
     align-content: normal;

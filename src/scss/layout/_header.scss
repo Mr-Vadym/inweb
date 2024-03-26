@@ -1,12 +1,12 @@
 .header {
+    position: relative;
     padding-top: 37px;
     min-height: 178px;
-    background-color: #1E1E1E;
+    background-color: #1e1e1e;
     box-shadow: 0px 7px 15px 0px rgba(175, 175, 175, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 
     &__top {
         padding: 0 37px;
@@ -26,21 +26,6 @@
 
 
 
-
-
-    &__go-to,
-    &__offer-news {
-        @extend %montserrat-600;
-        padding: 0 30px;
-        border-radius: 18px;
-        height: 36px;
-        line-height: 36px;
-
-        background: #fff;
-        color: rgb(0, 0, 0);
-
-    }
-
     & .logo {
         margin: 0 auto;
     }
@@ -48,10 +33,7 @@
     &__sub {
         margin-top: 35px;
         position: relative;
-
     }
-
-
 
     &__sub-items {
         margin: 0 auto;
@@ -60,13 +42,6 @@
         display: flex;
         justify-content: space-between;
         // flex-wrap: wrap;
-
-
-
-
-
-
-
     }
 
     // &__sub-item {
@@ -87,14 +62,11 @@
         font-size: 20px;
         position: relative;
         display: inline-block;
-        transition: all .3s;
+        transition: all 0.3s;
 
         path {
             transition: all 0.3s;
         }
-
-
-
     }
 
     &__sub-item:nth-child(2)>span,
@@ -108,27 +80,18 @@
             right: 19px;
             top: 11px;
         }
-
     }
-
-
-
-
-
-
 }
 
 .search {
     &.active {
         opacity: 1;
         visibility: visible;
-
-
     }
 
     opacity: 0;
     visibility: hidden;
-    transition: .3s;
+    transition: 0.3s;
     padding: 20px 35px;
 
     z-index: 1;
@@ -138,8 +101,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-
-
 
     &__form {
         margin: 0 auto;
@@ -162,9 +123,7 @@
         line-height: 30px;
         outline: transparent;
     }
-
 }
-
 
 .sidebar {
     opacity: 0;
@@ -174,7 +133,7 @@
     right: 0;
     height: 100vh;
     z-index: 2;
-    transition: .3s;
+    transition: 0.3s;
     // background: rgba(0, 0, 0, 0.5);
 
     &.active {
@@ -182,9 +141,7 @@
         visibility: visible;
 
         .sidebar__inner {
-
             left: 0;
-
         }
     }
 
@@ -197,18 +154,52 @@
     }
 
     &__inner {
-        width: 350px;
+        min-width: 350px;
 
         min-height: 100%;
         background: #fff;
         left: -350px;
-        transition: all .3s;
+        transition: all 0.3s;
         position: fixed;
+        overflow: auto;
 
     }
 
-    &__top-link {
+    &__top-list {
+        padding: 22px 30px 15px
+    }
+
+    &__sub-list {
+        margin-bottom: 10px;
+    }
+
+    &__top-link,
+    &__sub-link {
         color: #000;
+    }
+
+    &__top-link {
+        color: #000000;
+        @extend %montserrat-600;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    &__top-item+&__top-item,
+    &__sub-item {
+        margin-top: 15px;
+    }
+
+    &__sub-item+&__sub-item,
+    &__center-item+&__center-item {
+        margin-top: 10px;
+    }
+
+    &__sub-link {
+        color: #000000;
+        @extend %montserrat-400;
+        font-size: 22px;
+        line-height: 26px;
     }
 
     &__header {
@@ -217,4 +208,49 @@
         box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.25);
         background: #1e1e1e;
     }
+
+    &__close {
+        position: absolute;
+        top: 45px;
+        left: 30px;
+    }
+
+    &__content {
+        overflow: auto;
+        height: calc(100vh - 178px);
+    }
+
+    &__separator {
+
+        width: 100%;
+        height: 2px;
+        background: #005640;
+    }
+
+    &__center-list {
+        padding: 25px 30px;
+    }
+
+    &__center-link {
+        @extend %roboto-300;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    &__bottom {
+        padding: 21px 30px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+    }
+
+    &__social-list {
+        display: flex;
+        gap: 27px;
+    }
+
+
+
 }

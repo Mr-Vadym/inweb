@@ -4,12 +4,11 @@ body {
 }
 
 .no-scroll {
-    overflow: hidden;
+
+    overflow: overlay;
 }
 
-.padding {
-    padding-right: 17px;
-}
+
 
 body {
     font-size: 16px;
@@ -21,6 +20,11 @@ body {
     flex-direction: column;
     letter-spacing: 0;
     text-align: left;
+}
+
+.locked {
+    position: fixed;
+    width: 100%;
 }
 
 .main {
