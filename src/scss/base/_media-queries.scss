@@ -115,11 +115,15 @@
     }
 
     .sidebar {
+        // margin-top: 60px;
         top: 60px;
         left: -100%;
 
+        &__top-list {
+            padding-top: 25px;
+        }
+
         &__header {
-            // height: 60px;
             display: none;
         }
 
@@ -129,12 +133,13 @@
         }
 
         &__inner {
+            height: calc(100vh - 60px);
             width: 100%;
         }
 
         &__content {
-            height: calc(100vh - 60px);
             padding-bottom: 50px;
+            height: calc(100vh - 60px);
         }
 
         &__bottom {
@@ -143,6 +148,10 @@
 
         &__social-list {
             // margin-bottom: 50px;
+        }
+
+        &__btn-separator {
+            display: block;
         }
     }
 

@@ -257,3 +257,33 @@ button {
     }
 
 }
+
+.sidebar {
+    &__buttons {
+        padding: 30px 30px 25px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        // display: none;
+    }
+
+    &__button {
+        padding: 6px 15px 5px;
+        color: #000000;
+        @extend %roboto-300;
+        font-size: 16px;
+        line-height: 19px;
+        border: 0.85px solid #d2d2d2;
+        border-radius: 16px;
+
+        background: rgb(255, 255, 255);
+    }
+
+    &__btn-separator {
+        display: none;
+    }
+
+
+
+
+}
