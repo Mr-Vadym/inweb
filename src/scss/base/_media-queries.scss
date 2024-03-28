@@ -146,16 +146,13 @@
             padding-bottom: 0;
         }
 
-        &__social-list {
-            // margin-bottom: 50px;
-        }
+
 
         &__btn-separator {
             display: block;
         }
     }
 
-    .sidebar.active {}
 
     .footer {
         &__info {
@@ -237,7 +234,9 @@
         padding: 30px 0 20px;
 
         &__choise {
-            margin-top: 16px;
+            margin-top: 15px;
+            font-size: 16px;
+
         }
 
         &__articles {
@@ -285,12 +284,23 @@
         }
 
         &__img {
+            padding: 15px 20px;
             min-height: 160px;
+        }
+
+        &__category {
+            padding: 3px 13px;
+            font-size: 13px;
+            line-height: 14px;
         }
 
         &__body {
             min-height: 136px;
-            padding: 15px 20px;
+            padding: 15px 20px 20px;
+        }
+
+        &__title {
+            line-height: 120%;
         }
 
         font-weight: 600;
@@ -318,6 +328,11 @@
         svg {
             bottom: 4px;
         }
+
+        &__title {
+            font-size: 18px;
+            line-height: 120%;
+        }
     }
 
     .article {
@@ -329,6 +344,7 @@
     }
 
     .read-social {
+        margin-top: 20px;
         max-width: 100%;
         gap: 8px;
         align-items: flex-start;
@@ -364,6 +380,8 @@
     }
 
     .more-news {
+        padding: 15px 0;
+
 
         &__items {
             flex-direction: column;
@@ -374,19 +392,12 @@
             max-width: 100%;
             /* Плавна зміна границі при наведенні та забиранні курсору */
 
-            &:hover {
-                border-color: #005640;
 
-                .more-news__title {
-                    color: #005640;
-                }
-            }
+        }
 
-            .more-news__title {
-                transition: color 0.3s ease;
-                /* Плавна зміна кольору тексту при наведенні та забиранні курсору */
-            }
-
+        &__title {
+            font-size: 18px;
+            line-height: 120%;
         }
 
         &__item:last-child {

@@ -3,7 +3,6 @@ button {
 }
 
 @media (hover: hover) {
-
     .sidebar {
 
         &__top-link:hover,
@@ -12,12 +11,10 @@ button {
         }
     }
 
-
-
-
     .header {
 
-        &__sub-link:hover {
+        &__sub-link:hover,
+        &__hover-link:hover {
             cursor: pointer;
             color: #005640;
 
@@ -25,10 +22,15 @@ button {
                 stroke: #005640;
             }
         }
+
+
+    }
+
+    .header__hover-link {
+        color: #005640;
     }
 
     .top-btn {
-
         &:hover {
             background: #005640;
             color: #fff;
@@ -37,7 +39,7 @@ button {
     }
 
     .categories__link {
-        transition: .3s;
+        transition: 0.3s;
 
         &:hover {
             background: #005640;
@@ -46,17 +48,17 @@ button {
     }
 
     .more-news__item:hover {
-        transition: .3s;
+        transition: 0.3s;
         border-color: #005640;
 
         .more-news__title {
-            transition: .3s;
+            transition: 0.3s;
             color: #005640;
         }
     }
 
     .articles__item:hover {
-        transition: .3s;
+        transition: 0.3s;
         background: #005640;
 
         .articles__title {
@@ -69,7 +71,6 @@ button {
     }
 
     .articles__title:hover {
-
         text-decoration: underline;
         color: #fff;
     }
@@ -85,8 +86,6 @@ button {
     }
 
     .read {
-
-
         &__item-btn:hover {
             transition: 0.3s;
             background: #005640;
@@ -99,8 +98,6 @@ button {
         a:hover {
             color: #fff;
         }
-
-
 
         &__item:hover {
             path {
@@ -120,15 +117,9 @@ button {
 
     background: #fff;
     color: rgb(0, 0, 0);
-    transition: .3s;
-    border: 1px solid #1E1E1E;
-
-
+    transition: 0.3s;
+    border: 1px solid #1e1e1e;
 }
-
-
-
-
 
 .categories {
     margin-top: 20px;
@@ -188,8 +179,6 @@ button {
         transition: 0.3s;
     }
 
-
-
     svg {
         position: absolute;
         right: 0;
@@ -201,25 +190,18 @@ button {
     &__item {
         transition: 0.3s;
     }
-
 }
 
 .read {
     &__item-btn {
         transition: 0.3s;
     }
-
-
 }
 
 .footer {
-
-
     path {
         transition: 0.3s;
     }
-
-
 }
 
 .burger-btn {
@@ -253,9 +235,8 @@ button {
         right: 0;
         height: 2px;
         background: #fff;
-        transition: .3s;
+        transition: 0.3s;
     }
-
 }
 
 .sidebar {
@@ -282,8 +263,4 @@ button {
     &__btn-separator {
         display: none;
     }
-
-
-
-
 }

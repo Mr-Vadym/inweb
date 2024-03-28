@@ -35,8 +35,8 @@
     &__title {
         @extend %montserrat-400;
         color: #fff;
-        font-size: 13.7px;
-        line-height: 17px;
+        font-size: 13px;
+        line-height: 16px;
     }
 
     &__menu {
@@ -82,7 +82,7 @@
     &__link {
         @extend %montserrat-200;
         font-size: 14px;
-        line-height: 17px;
+        line-height: 120%;
         color: #fff;
     }
 

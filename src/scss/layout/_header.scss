@@ -36,12 +36,52 @@
     }
 
     &__sub-items {
+
         margin: 0 auto;
         padding: 0 37px;
         max-width: 1147px;
         display: flex;
         justify-content: space-between;
         // flex-wrap: wrap;
+    }
+
+    &__sub-item {
+        position: relative;
+
+    }
+
+    &__hover-items {
+        overflow: hidden;
+        visibility: hidden;
+        top: 34px;
+        // height: 0;
+
+        position: absolute;
+        padding: 10px 20px;
+        background: #363636;
+
+    }
+
+    &__sub-item:hover .header__hover-items {
+        visibility: visible;
+
+
+
+    }
+
+
+    &__hover-link {
+        color: #ffffff;
+        @extend %montserrat-400;
+        font-size: 18px;
+        line-height: 110%;
+        display: block;
+    }
+
+
+
+    &__hover-item+&__hover-item {
+        margin-top: 8px;
     }
 
     // &__sub-item {
@@ -60,9 +100,13 @@
         color: #fff;
 
         font-size: 20px;
+        line-height: 24px;
         position: relative;
         display: inline-block;
         transition: all 0.3s;
+
+
+
 
         path {
             transition: all 0.3s;
