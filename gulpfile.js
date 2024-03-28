@@ -65,9 +65,14 @@ gulp.task("imagemin-webp", function () {
 gulp.task("svg", function () {
   return gulp
     .src("src/img/**/*.svg")
-    .pipe(svgmin())
+    .pipe(svgmin({
+      js2svg: {
+        lowercase: false
+      }
+    }))
     .pipe(gulp.dest("dist/img"));
 });
+
 
 gulp.task("fonts", function () {
   gulp.src("src/fonts/**/*.ttf").pipe(ttf2woff()).pipe(gulp.dest("dist/fonts"));
