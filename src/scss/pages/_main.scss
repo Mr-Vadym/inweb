@@ -83,8 +83,12 @@
     }
 }
 
-.article {
-    padding: 59px 0 55px;
+.another-article {
+    padding-bottom: 55px;
+
+    &__articles {
+        margin-top: 60px;
+    }
 
     &__read-social {
         margin-top: 60px;
@@ -109,7 +113,10 @@
         gap: 0 10px;
     }
 
+
 }
+
+
 
 .read-social {
     max-width: 1084px;

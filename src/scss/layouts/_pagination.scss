@@ -1,0 +1,50 @@
+.pagination {
+
+    &__inner {
+        margin: 60px auto 0 auto;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+        gap: 10px;
+
+        align-items: center;
+    }
+
+    &__item {
+        padding: 2px 5px;
+
+
+    }
+
+    &__prew,
+    &__next {
+        font-size: 0;
+    }
+
+
+
+    &__item--active {
+        border-radius: 5px;
+
+        background: rgb(0, 86, 64);
+        color: #fff;
+
+    }
+
+    &__link {
+        color: rgb(30, 30, 30);
+        @extend %montserrat-600;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    &__link--active {
+        color: rgb(255, 255, 255);
+    }
+
+}

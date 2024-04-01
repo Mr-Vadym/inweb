@@ -122,10 +122,10 @@ button {
 }
 
 .categories {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
-    gap: 12px;
+    gap: 10px;
     // justify-content: space-between;
     flex-wrap: wrap;
     align-content: normal;
@@ -263,4 +263,19 @@ button {
     &__btn-separator {
         display: none;
     }
+}
+
+.social__link {
+    path {
+        transition: 0.3s;
+    }
+
+}
+
+.social__link:hover {
+    path {
+        transition: 0.3s;
+        stroke: #005640;
+    }
+
 }

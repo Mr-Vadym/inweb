@@ -10,13 +10,15 @@
 
 // Компоненти
 @import 'components/buttons';
-@import 'components/forms';
+// @import 'components/forms';
 // Інші компоненти
 
 // Макет
-@import 'layout/header';
-@import 'layout/articles';
-@import 'layout/footer';
+@import 'layouts/header';
+@import 'layouts/articles';
+@import 'layouts/breadcrumbs';
+@import 'layouts/title-inner';
+@import 'layouts/footer';
 // Інші компоненти макету
 
 // Сторінки

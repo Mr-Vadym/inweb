@@ -1,0 +1,25 @@
+.title-inner {
+
+    &__separator {
+        margin: 0 25px;
+        width: 0;
+        height: 42px;
+        border: 1px solid #005640;
+        display: inline-block;
+    }
+
+    &__descr {
+        display: inline-block;
+        @extend %roboto-300;
+        line-height: 140%;
+        text-align: left;
+        font-size: 20px;
+    }
+}
+
+.date {
+    color: #404040;
+    @extend %roboto-300;
+    font-size: 15px;
+    line-height: 18px;
+}

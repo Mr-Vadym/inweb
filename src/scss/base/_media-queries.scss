@@ -26,10 +26,6 @@
             width: 100px;
         }
 
-
-
-
-
         .top-btn,
         &__sub {
             display: none;
@@ -57,31 +53,16 @@
             &__form {
                 max-width: 1277px;
                 gap: 10px;
-
             }
         }
     }
 
-
-
     .burger-btn {
         width: 30px;
         height: 17px;
-
-
-
-
-
-
-
-
-
-
-
     }
 
     .burger-btn.active {
-
 
         &::before,
         &::after {
@@ -109,9 +90,6 @@
         span {
             opacity: 0;
         }
-
-
-
     }
 
     .sidebar {
@@ -146,13 +124,10 @@
             padding-bottom: 0;
         }
 
-
-
         &__btn-separator {
             display: block;
         }
     }
-
 
     .footer {
         &__info {
@@ -236,7 +211,6 @@
         &__choise {
             margin-top: 15px;
             font-size: 16px;
-
         }
 
         &__articles {
@@ -245,11 +219,10 @@
 
         & .articles__item:nth-child(1) {
             display: none;
-
         }
     }
 
-    .title-kit {
+    .title-inner {
         display: flex;
         flex-direction: column;
 
@@ -335,6 +308,14 @@
         }
     }
 
+    .another-article {
+        padding-bottom: 20px;
+
+        &__articles {
+            margin-top: 20px;
+        }
+    }
+
     .article {
         padding: 20px 0;
 
@@ -382,7 +363,6 @@
     .more-news {
         padding: 15px 0;
 
-
         &__items {
             flex-direction: column;
         }
@@ -391,8 +371,6 @@
             transition: all 0.3s ease;
             max-width: 100%;
             /* Плавна зміна границі при наведенні та забиранні курсору */
-
-
         }
 
         &__title {
