@@ -65,8 +65,8 @@
 
     &__categories {
         display: flex;
-        justify-content: space-between;
-        gap: 0;
+        justify-content: left;
+        gap: 10;
     }
 
     &__categories-item {}
