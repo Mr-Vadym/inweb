@@ -4,26 +4,17 @@
 
     }
 
-    &__item {
-        position: relative;
-    }
-
-    &__item:not(:last-child) {
-        padding-right: 7px;
-    }
-
     &__item+&__item {
-        padding-left: 13px;
 
         &::before {
-            content: 'I';
-            position: absolute;
+            content: "  I  ";
             font-size: 16px;
             @extend %roboto-300;
             line-height: 19px;
             color: #545454;
             left: 0;
-
+            bottom: 0;
+            white-space: pre
         }
     }
 
