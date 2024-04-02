@@ -5,10 +5,12 @@ body {
 }
 
 body {
-    font-size: 16px;
-    // line-height: 140%;
-    color: $default;
     @extend %roboto-300;
+    color: #000000;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
 
 
     letter-spacing: 0;

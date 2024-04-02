@@ -107,19 +107,15 @@ gulp.task("watch", function () {
       baseDir: "./dist",
     },
   });
-  gulp
-    .watch("src/scss/**/*.scss", gulp.series("sass"))
-    .on("change", browserSync.reload);
-  gulp
-    .watch("src/js/**/*.js", gulp.series("js"))
-    .on("change", browserSync.stream);
+
+  gulp.watch("src/scss/**/*.scss", gulp.series("sass")); // Зміни SCSS активують browserSync.stream() в рамках завдання "sass"
+  gulp.watch("src/js/**/*.js", gulp.series("js")).on("change", browserSync.stream); // Додатково для динамічного перезавантаження JavaScript (якщо підтримується)
   gulp.watch("src/img/**/*.{jpg,png}", gulp.series("imagemin-webp"));
   gulp.watch("src/img/**/*.svg", gulp.series("svg"));
   gulp.watch("src/fonts/**/*.ttf", gulp.series("fonts"));
-  gulp
-    .watch("src/html/**/*.html", gulp.series("html"))
-    .on("change", browserSync.reload);
+  gulp.watch("src/html/**/*.html", gulp.series("html")); // Зміни HTML не будуть активувати повні перезавантаження
 });
+
 
 gulp.task(
   "default",
