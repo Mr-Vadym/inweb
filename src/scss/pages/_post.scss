@@ -374,11 +374,14 @@
     &__articles {
         margin-top: 34px;
         display: block;
+        margin: 0 17px;
 
     }
 
+
+
     .more-slider__articles-item {
-        max-width: none;
+        // max-width: none;
         margin: 0 17px;
     }
 
@@ -407,5 +410,12 @@
     .slick-prev {
         left: -105px;
     }
+
+
+
+
+    // .articles__item .container {
+    //     margin: 0;
+    // }
 
 }

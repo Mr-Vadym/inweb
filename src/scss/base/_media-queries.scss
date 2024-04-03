@@ -133,7 +133,6 @@
         }
     }
 
-
     .footer {
         &__info {
             padding: 20px 0 31px;
@@ -240,7 +239,6 @@
         &__separator {
             margin: 10px 0 0;
             order: 1;
-
         }
 
         &__descr {
@@ -253,8 +251,6 @@
         width: 100%;
         height: 0;
     }
-
-
 
     .articles {
         flex-direction: column;
@@ -482,8 +478,6 @@
             }
         }
 
-
-
         &__author-link {
             display: none;
         }
@@ -499,15 +493,11 @@
         &__author-breadcrumbs {
             order: -1;
             margin-left: 0;
-
         }
 
         .left-border {
             display: none;
         }
-
-
-
     }
 
     .columns {
@@ -523,20 +513,90 @@
         }
     }
 
-    .about-author {
+    // .about-author {
+    //     margin-top: 25px;
+    //     padding: 30px 20px;
+    //     box-shadow: 0px 0px 9.88px 0px #00000040;
+    //     background: #ffffff;
+    //     margin-bottom: 30px;
+
+    //     &__title-inner {
+    //         display: none;
+    //     }
+
+    //     &__about {
+    //         margin-top: 0;
+    //         gap: 10px;
+    //     }
+
+    //     &__name {
+    //         font-size: 24px;
+    //         line-height: 29px;
+    //         // @extend %montserrat-700;
+    //         font-family: Montserrat, sans-serif;
+    //         font-weight: 700;
+    //     }
+
+    //     &__position {
+    //         font-size: 14px;
+    //         line-height: 17%;
+    //     }
+
+    //     &__social {
+    //         margin-top: 20px;
+    //         max-width: 62px;
+    //         gap: 5px;
+    //     }
+
+    //     &__social-link svg {
+    //         width: 14px;
+    //         height: 14px;
+    //     }
+
+    //     &__descr {
+    //         margin-top: 25px;
+    //     }
+
+    //     &__text {
+    //         font-size: 16px;
+    //         line-height: 22.4px;
+    //         margin-bottom: 20px;
+    //     }
+
+    //     .categories {
+    //         gap: 10px;
+    //         justify-content: start
+    //     }
+
+    //     .categories__link {
+    //         font-size: 12px;
+    //         line-height: 14px;
+    //         padding: 0 20px;
+    //         height: 24px;
+
+    //     }
+
+    // }
+
+    .card {
         margin-top: 25px;
         padding: 30px 20px;
         box-shadow: 0px 0px 9.88px 0px #00000040;
         background: #ffffff;
         margin-bottom: 30px;
 
-        &__title-inner {
+        .title-inner {
             display: none;
         }
 
         &__about {
             margin-top: 0;
             gap: 10px;
+            justify-content: space-between;
+        }
+
+        &__info {
+            order: -1;
         }
 
         &__name {
@@ -545,11 +605,20 @@
             // @extend %montserrat-700;
             font-family: Montserrat, sans-serif;
             font-weight: 700;
+            display: block;
+        }
+
+        &__name::after {
+            display: none;
         }
 
         &__position {
             font-size: 14px;
             line-height: 17%;
+        }
+
+        &__departament {
+            display: none;
         }
 
         &__social {
@@ -575,7 +644,7 @@
 
         .categories {
             gap: 10px;
-            justify-content: start
+            justify-content: start;
         }
 
         .categories__link {
@@ -583,39 +652,13 @@
             line-height: 14px;
             padding: 0 20px;
             height: 24px;
-
-        }
-
-
-    }
-
-    .card {
-        &__about {
-            justify-content: space-between
-        }
-
-        &__info {
-            order: -1;
-        }
-
-        &__name {
-            display: block;
-
-        }
-
-        &__name::after {
-            display: none;
-
-        }
-
-        &__departament {
-            display: none;
         }
 
         .social {
             display: flex;
         }
     }
+
 
     .breadcrumbs {
         &__item+&__item {
@@ -630,15 +673,13 @@
             font-size: 12px;
             line-height: 14px;
         }
-
-
     }
 
     .more-slider {
         padding-bottom: 15px;
 
         &__articles-item.articles__item {
-            margin: 0;
+            // margin: 0;
         }
 
         .container {
@@ -651,6 +692,8 @@
 
         &__articles {
             margin-top: 0;
+            margin-left: -17px;
+            margin-right: -17px;
         }
 
         .slick-arrow {
@@ -661,7 +704,6 @@
     .category-page {
         .categories {
             display: none;
-
         }
 
         &__articles {
@@ -670,7 +712,6 @@
     }
 
     .pagination {
-
         &__inner {
             margin-top: 20px;
             gap: 12px;
@@ -699,6 +740,21 @@
 
         &__articles {
             margin-top: 15px;
+        }
+    }
+
+    .main {
+        .categories {
+            display: none;
+        }
+    }
+
+    .author-page {
+        &__photo {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            object-fit: cover;
         }
     }
 }

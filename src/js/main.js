@@ -23,6 +23,7 @@ jQuery(function () {
 
     $(".more-slider__articles").slick({
         infinite: true,
+        dots: false,
         speed: 700,
         autoplay: true,
         autoplaySpeed: 2000,
@@ -31,19 +32,21 @@ jQuery(function () {
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1310,
+                arrows: false,
+
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true,
+                    dots: false,
                     arrows: false,
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 800,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1
                 }
             },
