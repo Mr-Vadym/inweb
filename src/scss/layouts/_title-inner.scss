@@ -2,10 +2,10 @@
 
     &__separator {
         margin: 0 25px;
-        width: 0;
-        height: 42px;
-        border: 1px solid #005640;
-        display: inline-block;
+        // width: 0;
+        // height: 42px;
+        // border: 1px solid #005640;
+        // display: inline-block;
     }
 
     &__descr {
@@ -15,6 +15,14 @@
         text-align: left;
         font-size: 20px;
     }
+}
+
+.separator {
+    // margin: 0 25px;
+    width: 0;
+    height: 42px;
+    border: 1px solid #005640;
+    display: inline-block;
 }
 
 .date {

@@ -122,16 +122,17 @@ button {
 }
 
 .categories {
+
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 5px;
     // justify-content: space-between;
     flex-wrap: wrap;
     align-content: normal;
 
     &__link {
-        padding: 0 29px;
+        padding: 0 40px;
         height: 42px;
 
         border: 1px solid #d2d2d2;
@@ -146,6 +147,11 @@ button {
         line-height: 19px;
     }
 }
+
+.categories+.categories {
+    margin-top: 15px;
+}
+
 
 .more-news {
     &__item {

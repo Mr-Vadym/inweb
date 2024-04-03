@@ -17,6 +17,13 @@
         }
     }
 
+    & .articles__item:nth-child(2) {
+
+        & .articles__body {
+            min-height: 207px;
+        }
+    }
+
     // &__categories {
     //     margin-top: 20px;
     // }
@@ -163,6 +170,10 @@
 
     & .articles {
         margin-top: 30px;
+    }
+
+    &__categories {
+        margin-top: 20px;
     }
 }
 
