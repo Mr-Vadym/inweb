@@ -127,7 +127,6 @@ button {
     display: flex;
     justify-content: space-between;
     gap: 5px;
-    // justify-content: space-between;
     flex-wrap: wrap;
     align-content: normal;
 
@@ -157,7 +156,6 @@ button {
     &__item {
         border-color: transparent;
         transition: 0.3s;
-        /* Плавна зміна границі при наведенні та забиранні курсору */
     }
 }
 
@@ -255,7 +253,6 @@ button {
         display: flex;
         justify-content: space-between;
         gap: 10px;
-        // display: none;
     }
 
     &__button {

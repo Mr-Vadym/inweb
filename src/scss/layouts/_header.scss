@@ -42,7 +42,6 @@
         max-width: 1147px;
         display: flex;
         justify-content: space-between;
-        // flex-wrap: wrap;
     }
 
     &__sub-item {
@@ -54,7 +53,6 @@
         overflow: hidden;
         visibility: hidden;
         top: 34px;
-        // height: 0;
 
         position: absolute;
         padding: 10px 20px;
@@ -84,15 +82,7 @@
         margin-top: 8px;
     }
 
-    // &__sub-item {
 
-    //     display: inline-block;
-    // }
-
-    // &__sub-item+&__sub-item {
-    //     margin-left: 33px;
-
-    // }
 
     &__sub-link {
         padding: 5px 21px 41px;
@@ -178,7 +168,6 @@
     height: 100vh;
     z-index: 2;
     transition: 0.3s;
-    // background: rgba(0, 0, 0, 0.5);
 
     &.active {
         opacity: 1;
