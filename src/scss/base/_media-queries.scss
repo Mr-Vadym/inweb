@@ -225,6 +225,10 @@
         & .articles__item:nth-child(1) {
             display: none;
         }
+
+        .categories {
+            display: none;
+        }
     }
 
     .title-inner {
@@ -678,9 +682,7 @@
     .more-slider {
         padding-bottom: 15px;
 
-        &__articles-item.articles__item {
-            // margin: 0;
-        }
+
 
         .container {
             padding: 0;
@@ -695,13 +697,12 @@
             margin-left: -17px;
             margin-right: -17px;
         }
-
-        .slick-arrow {
-            display: none;
-        }
     }
 
+
     .category-page {
+        padding-bottom: 34px;
+
         .categories {
             display: none;
         }
@@ -709,6 +710,12 @@
         &__articles {
             margin-top: 20px;
         }
+
+        .read-social {
+            display: flex;
+        }
+
+
     }
 
     .pagination {
@@ -741,6 +748,12 @@
         &__articles {
             margin-top: 15px;
         }
+
+        .read-social {
+            display: flex;
+        }
+
+
     }
 
     .main {
@@ -750,11 +763,31 @@
     }
 
     .author-page {
+        padding-bottom: 35px;
+
+        &__card {
+            flex-direction: column;
+            gap: 25px;
+        }
+
         &__photo {
             width: 85px;
             height: 85px;
             border-radius: 50%;
             object-fit: cover;
+        }
+
+        &__social {
+            max-width: 60px;
+        }
+
+        &__descr {
+            margin-top: 0;
+        }
+
+        &__about {
+            min-width: auto;
+            gap: 0;
         }
     }
 }

@@ -33,7 +33,6 @@ jQuery(function () {
         responsive: [
             {
                 breakpoint: 1310,
-                arrows: false,
 
                 settings: {
                     slidesToShow: 3,
@@ -47,6 +46,7 @@ jQuery(function () {
                 breakpoint: 800,
                 settings: {
                     slidesToShow: 2,
+                    arrows: false,
                     slidesToScroll: 1
                 }
             },
@@ -54,12 +54,12 @@ jQuery(function () {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    arrows: false,
+
                 }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
+
         ]
     });
 });
