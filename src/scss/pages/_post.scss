@@ -163,7 +163,7 @@
             border: 1px solid #005640;
         }
 
-        &>div {
+        div {
             padding: 20px 20px;
             margin-bottom: 40px;
             box-shadow: 5px 5px 10px 0px #00000040;
@@ -302,6 +302,12 @@
         gap: 35px;
     }
 
+    .social {
+
+        display: none;
+
+    }
+
 
 
 
@@ -342,13 +348,11 @@
         box-shadow: 0px 2.08px 10.4px 0px #00000026;
         background: #ffffff;
     }
-}
 
-.social {
-
-    display: none;
 
 }
+
+
 
 .more-slider {
     display: block;
