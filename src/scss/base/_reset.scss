@@ -6,12 +6,21 @@
     box-sizing: border-box;
 }
 
-a,
-a:hover {
 
-    text-decoration: none;
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
     color: #000000;
+
+    &:hover {
+
+        text-decoration: none;
+        color: #000000;
+
+    }
 }
+
 
 button {
     background-color: transparent;
