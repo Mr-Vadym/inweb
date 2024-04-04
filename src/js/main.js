@@ -33,7 +33,6 @@ jQuery(function () {
         responsive: [
             {
                 breakpoint: 1310,
-
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
