@@ -13,6 +13,8 @@ jQuery(function () {
         $(".search").toggleClass("active"); // Перемикаємо клас 'active' для '.search'
         $(".sidebar").removeClass("active"); // Перемикаємо клас 'active' для '.search'
         $("body").removeClass("locked"); // Перемикаємо клас 'active' для '.search'
+        $(".burger-btn").removeClass("active"); // Перемикаємо клас 'active' для '.search'
+
 
 
         // Викликаємо функцію з фокусом після завершення анімації
