@@ -108,6 +108,7 @@ button {
     }
 }
 
+
 .top-btn {
     @extend %montserrat-600;
     padding: 0 30px;
@@ -144,6 +145,11 @@ button {
         @extend %roboto-300;
         color: #545454;
         line-height: 19px;
+    }
+
+    &__link--active {
+        background: #005640;
+        color: #fff;
     }
 }
 

@@ -12,6 +12,8 @@ jQuery(function () {
         event.preventDefault(); // Запобігаємо перезавантаженню сторінки при натисканні на кнопку
         $(".search").toggleClass("active"); // Перемикаємо клас 'active' для '.search'
         $(".sidebar").removeClass("active"); // Перемикаємо клас 'active' для '.search'
+        $("body").removeClass("locked"); // Перемикаємо клас 'active' для '.search'
+
 
         // Викликаємо функцію з фокусом після завершення анімації
         $(".search").one("transitionend", function () {

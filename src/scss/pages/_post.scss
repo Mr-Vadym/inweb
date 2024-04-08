@@ -93,7 +93,7 @@
         }
 
         ul li::before {
-            content: '-';
+            content: '—';
             color: #005640;
             @extend %roboto-700;
             font-size: 18px;
@@ -332,11 +332,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: rgb(30, 30, 30);
+        color: #1e1e1e;
         @extend %montserrat-400;
         font-size: 16.65px;
         line-height: 20px;
         border-radius: 27px;
+        border: 1px solid transparent;
 
 
         box-shadow: 0px 2.08px 10.4px 0px #00000026;
